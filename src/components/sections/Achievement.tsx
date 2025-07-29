@@ -9,16 +9,12 @@ import { Button } from "@/components/ui/button";
 import {
   Award,
   Trophy,
-  Star,
   Calendar,
   Building,
   ExternalLink,
-  Medal,
   Crown,
   Zap,
   Eye,
-  Download,
-  Space,
 } from "lucide-react";
 
 const AchievementList = [
