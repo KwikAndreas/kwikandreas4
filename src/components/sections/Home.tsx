@@ -139,7 +139,7 @@ export function HomeSection() {
           className="mb-4"
         >
           <span className="text-sm md:text-base text-muted-foreground font-medium tracking-wider uppercase">
-            👋 Hello, I'm
+            👋 Hello, Im
           </span>
         </motion.div>
 
@@ -155,7 +155,7 @@ export function HomeSection() {
           className="mb-8"
         >
           <h2 className="text-xl md:text-3xl font-semibold text-muted-foreground">
-            I'm a <TypingAnimation words={roles} />
+            Im a <TypingAnimation words={roles} />
           </h2>
         </motion.div>
 

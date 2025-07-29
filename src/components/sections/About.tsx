@@ -361,9 +361,9 @@ export function AboutSection() {
                     </div>
                     <div className="mt-6 p-4 bg-primary/10 rounded-lg">
                       <p className="text-sm text-muted-foreground italic">
-                        "The best way to predict the future is to create it.
-                        That's why I'm passionate about building solutions that
-                        matter."
+                        The best way to predict the future is to create it.
+                        That why Im passionate about building solutions that
+                        matter.
                       </p>
                     </div>
                   </motion.div>
