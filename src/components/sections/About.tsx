@@ -119,7 +119,7 @@ const journey = [
     description:
       "Started my studies in Computer Science at Bunda Mulia University, focusing on software engineering and AI.",
     icon: University,
-  }
+  },
 ];
 
 export function AboutSection() {
