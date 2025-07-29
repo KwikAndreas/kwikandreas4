@@ -66,7 +66,7 @@ function FloatingParticles() {
   }, []);
 
   if (!mounted) {
-    return null; // Don't render on server
+    return null;
   }
 
   return (
@@ -113,7 +113,7 @@ export function HomeSection() {
     }
   };
 
-  const roles = ["Web Developer", "Game Developer", "App Developer"];
+  const roles = ["Web Developer", "Game Developer", "Mobile Developer"];
 
    return (
     <section id="home" className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden select-none">

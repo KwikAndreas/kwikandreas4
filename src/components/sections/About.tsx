@@ -14,13 +14,7 @@ import {
   GraduationCap,
   Heart,
   ExternalLink,
-  Database,
-  Smartphone,
-  Globe,
   Gamepad2,
-  PanelTop,
-  Instagram,
-  School,
   University,
   School2,
 } from "lucide-react";
@@ -378,7 +372,6 @@ export function AboutSection() {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Achievements & Skills */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -386,7 +379,6 @@ export function AboutSection() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            {/* Achievements Grid */}
             <motion.div variants={itemVariants}>
               <h3 className="text-xl font-semibold mb-6">Achievements</h3>
               <div className="grid grid-cols-2 gap-4">

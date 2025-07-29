@@ -1,7 +1,6 @@
 // components/sections/Stack.tsx
 "use client";
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import Image from "next/image";
 
