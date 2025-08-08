@@ -56,7 +56,7 @@ const projects = [
       "Tailwind CSS",
       "Stripe",
     ],
-    liveLink: "https://gki-cinda.vercel.app",
+    liveLink: "https://gkicinda.id",
     githubLink: "https://github.com/KwikAndreas/GKI-CINDA",
     featured: true,
     stats: {
