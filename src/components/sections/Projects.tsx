@@ -11,17 +11,43 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useRef, useState } from "react";
-import { ExternalLink, Github, Eye, Calendar, Users, Star } from "lucide-react";
+import {
+  ExternalLink,
+  Github,
+  Eye,
+  Calendar,
+  Users,
+  Star,
+  ArrowRight,
+} from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const projects = [
   {
+    id: "gki-cipinang-indah",
     title: "GKI Cipinang Indah",
     category: "Web Development",
+    client: "GKI Cipinang Indah Church",
+    duration: "3 months",
     description:
       "Website gereja modern dengan sistem manajemen jemaat, jadwal ibadah, dan platform donasi online. Dibangun dengan Next.js dan PostgreSQL.",
     fullDescription:
       "Platform digital komprehensif untuk gereja yang mencakup sistem registrasi jemaat, manajemen acara, streaming ibadah online, dan integrasi pembayaran untuk donasi.",
+    background:
+      "Gereja membutuhkan platform digital untuk mengelola jemaat dan mempermudah akses informasi ibadah, terutama setelah pandemi COVID-19 yang mengharuskan adaptasi teknologi.",
+    objectives: [
+      "Menyediakan platform digital untuk manajemen jemaat",
+      "Memfasilitasi streaming ibadah online",
+      "Mengintegrasikan sistem donasi digital",
+      "Meningkatkan engagement komunitas gereja",
+    ],
+    images: [
+      "/project/gkicinda_home.webp",
+      "/project/gkicinda_youtube.webp",
+      "/project/gkicinda_jadwal.webp",
+      "/project/gkicinda_download.webp",
+    ],
     image: "/project/gkicinda.webp",
     technologies: [
       "Next.js",
@@ -31,7 +57,6 @@ const projects = [
       "Stripe",
     ],
     liveLink: "https://gki-cinda.vercel.app",
-    githubLink: "https://github.com/KwikAndreas/GKI-CINDA",
     featured: true,
     stats: {
       users: "100+",
@@ -40,12 +65,24 @@ const projects = [
     status: "Live",
   },
   {
+    id: "car-rush",
     title: "Car Rush",
     category: "Game Development",
+    client: "Personal Project",
+    duration: "2 months",
     description:
       "Game mobile endless runner dengan Unity 3D. Fitur multiplayer real-time, sistem upgrade kendaraan, dan leaderboard global.",
     fullDescription:
       "Game racing mobile dengan mekanik endless runner, sistem monetisasi in-app purchase, analytics terintegrasi, dan cloud save functionality.",
+    background:
+      "Proyek personal untuk mengeksplorasi game development dengan Unity dan mempelajari implementasi sistem multiplayer real-time dalam mobile gaming.",
+    objectives: [
+      "Mengembangkan game mobile yang engaging",
+      "Implementasi sistem multiplayer real-time",
+      "Integrasi monetisasi in-app purchase",
+      "Optimasi performa untuk berbagai device mobile",
+    ],
+    images: ["/project/carrush.webp"],
     image: "/project/carrush.webp",
     technologies: ["Unity", "C#", "Firebase", "Google Play Services", "AdMob"],
     liveLink: "https://bit-grow.itch.io/carrush",
@@ -57,12 +94,30 @@ const projects = [
     status: "Abandoned",
   },
   {
+    id: "angke5",
     title: "Angke5",
-    category: "Book Restaurant",
+    category: "Web Development",
+    client: "Restaurant Business",
+    duration: "4 months",
     description:
       "Platform e-commerce untuk penjualan buah segar dengan sistem inventory real-time, tracking pengiriman, dan program loyalitas pelanggan.",
     fullDescription:
       "E-commerce platform dengan fitur advanced seperti AI recommendation engine, real-time inventory management, automated logistics, dan customer loyalty program.",
+    background:
+      "Bisnis restoran membutuhkan sistem reservasi dan pemesanan online yang terintegrasi dengan sistem inventory dan customer management.",
+    objectives: [
+      "Digitalisasi sistem reservasi restoran",
+      "Implementasi sistem inventory real-time",
+      "Pengembangan program loyalitas pelanggan",
+      "Optimasi operasional restoran",
+    ],
+    images: [
+      "/project/angke5.webp",
+      "/project/angke5_menu.webp",
+      "/project/angke5_about.webp",
+      "/project/angke5_contact.webp",
+      "/project/angke5_rooms.webp",
+    ],
     image: "/project/angke5.webp",
     liveLink: "https://angke5.web.app/",
     technologies: ["Flutter", "Firebase"],
@@ -75,14 +130,26 @@ const projects = [
     status: "Live",
   },
   {
+    id: "waste-sorter",
     title: "Waste Sorter",
     category: "Game Development",
+    client: "Educational Initiative",
+    duration: "1.5 months",
     description:
       "Game edukasi untuk memilah sampah dengan mekanik drag-and-drop, leaderboard, dan sistem reward.",
     fullDescription:
       "Game interaktif yang mengajarkan pemain tentang pentingnya daur ulang dan pengelolaan sampah. Fitur termasuk berbagai level, tantangan waktu, dan integrasi media sosial.",
+    background:
+      "Inisiatif edukasi lingkungan untuk meningkatkan kesadaran masyarakat tentang pentingnya pengelolaan sampah dan daur ulang melalui gamifikasi.",
+    objectives: [
+      "Edukasi pengelolaan sampah yang benar",
+      "Meningkatkan kesadaran lingkungan",
+      "Gamifikasi pembelajaran sustainability",
+      "Engagement melalui kompetisi dan leaderboard",
+    ],
+    images: ["/project/waste_sorter.webp"],
     image: "/project/waste_sorter.webp",
-    technologies: ["Unity", "C#", "Blender", "Adobe Illustrator"],
+    technologies: ["Unity", "C#", "Python", "TensorFlow", "CNN", "Blender", "Adobe Illustrator"],
     liveLink: "https://bit-grow.itch.io/waste-sorter",
     featured: false,
     stats: {
@@ -94,7 +161,15 @@ const projects = [
   },
 ];
 
-const categories = ["All", "Web Development", "Game Development", "E-commerce"];
+export { projects };
+
+const categories = [
+  "All",
+  "Web Development",
+  "Game Development",
+  "App Development",
+];
+
 function ProjectCard({
   project,
   index,
@@ -104,6 +179,11 @@ function ProjectCard({
 }) {
   const [isHovered, setIsHovered] = useState(false);
   const [imageError, setImageError] = useState(false);
+  const router = useRouter();
+
+  const handleViewDetails = () => {
+    router.push(`/projects/${project.id}`);
+  };
 
   return (
     <motion.div
@@ -156,8 +236,8 @@ function ProjectCard({
               <Badge
                 variant={project.status === "Live" ? "default" : "secondary"}
                 className={`text-xs ${
-                  project.status === "Live" 
-                    ? "bg-green-500/20 text-green-600 dark:text-green-400 border-green-500/30" 
+                  project.status === "Live"
+                    ? "bg-green-500/20 text-green-600 dark:text-green-400 border-green-500/30"
                     : project.status === "Abandoned"
                     ? "bg-red-500/20 text-red-600 dark:text-red-400 border-red-500/30"
                     : ""
@@ -184,14 +264,17 @@ function ProjectCard({
             <motion.div
               className="absolute inset-0 flex items-center justify-center gap-3 z-10"
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ 
+              animate={{
                 opacity: isHovered ? 1 : 0,
-                scale: isHovered ? 1 : 0.8
+                scale: isHovered ? 1 : 0.8,
               }}
               transition={{ duration: 0.3 }}
             >
               {project.liveLink && (
-                <Button size="sm" className="backdrop-blur-sm bg-primary/90 hover:bg-primary">
+                <Button
+                  size="sm"
+                  className="backdrop-blur-sm bg-primary/90 hover:bg-primary"
+                >
                   <a
                     href={project.liveLink}
                     target="_blank"
@@ -288,6 +371,12 @@ function ProjectCard({
                 </a>
               </Button>
             )}
+
+            <Button onClick={handleViewDetails} size="sm" className="flex-1">
+              <ArrowRight className="w-4 h-4 mr-2" />
+              View Details
+            </Button>
+
             {project.githubLink && project.githubLink !== "#" && (
               <Button asChild variant="ghost" size="sm">
                 <a

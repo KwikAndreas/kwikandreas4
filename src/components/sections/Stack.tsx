@@ -2,28 +2,35 @@
 "use client";
 import { motion } from "framer-motion";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
+import { useTheme } from "next-themes";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const techStack = [
   // Frontend Development
-  { name: "React", image: "/stack/react.svg", hasImage: true, isInvert: false },
+  {
+    name: "React",
+    image: "/stack/react.svg",
+    hasImage: true,
+    invertOnDark: false,
+  },
   {
     name: "Next.js",
     image: "/stack/nextjs.svg",
     hasImage: true,
-    isInvert: true,
+    invertOnDark: true,
   },
   {
     name: "TypeScript",
     image: "/stack/typescript.svg",
     hasImage: true,
-    isInvert: false,
+    invertOnDark: false,
   },
   {
     name: "Tailwind CSS",
     image: "/stack/tailwind.svg",
     hasImage: true,
-    isInvert: false,
+    invertOnDark: false,
   },
 
   // Backend & Database
@@ -31,19 +38,19 @@ const techStack = [
     name: "Node.js",
     image: "/stack/nodejs.svg",
     hasImage: true,
-    isInvert: false,
+    invertOnDark: false,
   },
   {
     name: "Firebase",
     image: "/stack/firebase.svg",
     hasImage: true,
-    isInvert: false,
+    invertOnDark: false,
   },
   {
     name: "Supabase",
     image: "/stack/supabase.svg",
     hasImage: true,
-    isInvert: false,
+    invertOnDark: false,
   },
 
   // Programming Languages
@@ -51,27 +58,42 @@ const techStack = [
     name: "Python",
     image: "/stack/python.svg",
     hasImage: true,
-    isInvert: false,
+    invertOnDark: false,
   },
-  { name: "C#", image: "/stack/csharp.svg", hasImage: true, isInvert: false },
-  { name: "C++", image: "/stack/cpp.svg", hasImage: true, isInvert: false },
-  { name: "Dart", image: "/stack/dart.svg", hasImage: true, isInvert: false },
+  {
+    name: "C#",
+    image: "/stack/csharp.svg",
+    hasImage: true,
+    invertOnDark: false,
+  },
+  { name: "C++", image: "/stack/cpp.svg", hasImage: true, invertOnDark: false },
+  {
+    name: "Dart",
+    image: "/stack/dart.svg",
+    hasImage: true,
+    invertOnDark: false,
+  },
 
   // AI & Machine Learning
   {
     name: "TensorFlow",
     image: "/stack/tensorflow.svg",
     hasImage: true,
-    isInvert: false,
+    invertOnDark: false,
   },
 
   // Game Development & 3D
-  { name: "Unity", image: "/stack/unity.svg", hasImage: true, isInvert: true },
+  {
+    name: "Unity",
+    image: "/stack/unity.svg",
+    hasImage: true,
+    invertOnDark: true,
+  },
   {
     name: "Blender",
     image: "/stack/blender.svg",
     hasImage: true,
-    isInvert: false,
+    invertOnDark: false,
   },
 
   // Design & Creative
@@ -79,13 +101,13 @@ const techStack = [
     name: "Illustrator",
     image: "/stack/illustrator.svg",
     hasImage: true,
-    isInvert: false,
+    invertOnDark: false,
   },
   {
     name: "Premiere",
     image: "/stack/premiere.svg",
     hasImage: true,
-    isInvert: false,
+    invertOnDark: false,
   },
 ];
 
@@ -105,6 +127,15 @@ function TechCard({
   tech: (typeof techStack)[0];
   index: number;
 }) {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const shouldInvert = mounted && tech.invertOnDark && theme === "dark";
+
   return (
     <motion.div
       variants={fadeInAnimation}
@@ -126,10 +157,12 @@ function TechCard({
               <Image
                 src={tech.image}
                 alt={tech.name}
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain transition-all duration-300"
                 width={64}
                 height={64}
-                style={{ filter: tech.isInvert ? "invert(100%)" : "none" }}
+                style={{
+                  filter: shouldInvert ? "invert(100%)" : "none",
+                }}
               />
             ) : (
               <div className="w-full h-full bg-gradient-to-br from-violet-500 to-purple-500 rounded-lg flex items-center justify-center text-2xl font-bold text-white">
