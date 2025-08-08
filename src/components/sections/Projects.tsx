@@ -57,6 +57,7 @@ const projects = [
       "Stripe",
     ],
     liveLink: "https://gki-cinda.vercel.app",
+    githubLink: "https://github.com/KwikAndreas/GKI-CINDA",
     featured: true,
     stats: {
       users: "100+",
