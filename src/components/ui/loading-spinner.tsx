@@ -8,7 +8,7 @@ export function LoadingSpinner() {
         transition={{
           duration: 1,
           repeat: Infinity,
-          ease: "linear"
+          ease: "linear",
         }}
         className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full"
       />

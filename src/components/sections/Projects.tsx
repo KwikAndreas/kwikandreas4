@@ -150,7 +150,15 @@ const projects = [
     ],
     images: ["/project/waste_sorter.webp"],
     image: "/project/waste_sorter.webp",
-    technologies: ["Unity", "C#", "Python", "TensorFlow", "CNN", "Blender", "Adobe Illustrator"],
+    technologies: [
+      "Unity",
+      "C#",
+      "Python",
+      "TensorFlow",
+      "CNN",
+      "Blender",
+      "Adobe Illustrator",
+    ],
     liveLink: "https://bit-grow.itch.io/waste-sorter",
     featured: false,
     stats: {

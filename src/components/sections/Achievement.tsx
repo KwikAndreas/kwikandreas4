@@ -63,8 +63,7 @@ const AchievementList = [
   {
     id: 4,
     title: "Ghost in the Database",
-    description:
-      "Kursus yang mengajari kemampuan dalam keamanan database",
+    description: "Kursus yang mengajari kemampuan dalam keamanan database",
     organization: "JadiHacker",
     date: "November 2024",
     category: "Course",
@@ -77,8 +76,7 @@ const AchievementList = [
   {
     id: 5,
     title: "Linux System Administration",
-    description:
-      "Sertifikat profesional dalam administrasi sistem Linux",
+    description: "Sertifikat profesional dalam administrasi sistem Linux",
     organization: "Boer Technology (Btech)",
     date: "December 2024",
     category: "certification",
@@ -91,8 +89,7 @@ const AchievementList = [
   {
     id: 6,
     title: "AI-Based Game Design 3rd Place",
-    description:
-      "Posisi ke-3 pada lomba pengembangan game berbasis AI",
+    description: "Posisi ke-3 pada lomba pengembangan game berbasis AI",
     organization: "Indonesia Digital Innovation",
     date: "May 2025",
     category: "achievement",

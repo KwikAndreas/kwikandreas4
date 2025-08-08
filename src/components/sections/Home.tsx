@@ -95,7 +95,6 @@ function FloatingParticles() {
   );
 }
 
-
 export function HomeSection() {
   const FADE_DOWN_ANIMATION_VARIANTS = {
     hidden: { opacity: 0, y: -10 },
@@ -115,8 +114,11 @@ export function HomeSection() {
 
   const roles = ["Web Developer", "Game Developer", "Mobile Developer"];
 
-   return (
-    <section id="home" className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden select-none">
+  return (
+    <section
+      id="home"
+      className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden select-none"
+    >
       <FloatingParticles />
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
       <motion.div
@@ -134,10 +136,7 @@ export function HomeSection() {
         }}
         className="text-center z-10 max-w-4xl mx-auto px-4"
       >
-        <motion.div 
-          variants={FADE_DOWN_ANIMATION_VARIANTS}
-          className="mb-4"
-        >
+        <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS} className="mb-4">
           <span className="text-sm md:text-base text-muted-foreground font-medium tracking-wider uppercase">
             👋 Hello, Im
           </span>
@@ -150,10 +149,7 @@ export function HomeSection() {
           Kwik Andreas
         </motion.h1>
 
-        <motion.div
-          variants={FADE_DOWN_ANIMATION_VARIANTS}
-          className="mb-8"
-        >
+        <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS} className="mb-8">
           <h2 className="text-xl md:text-3xl font-semibold text-muted-foreground">
             Im a <TypingAnimation words={roles} />
           </h2>
@@ -163,16 +159,17 @@ export function HomeSection() {
           variants={FADE_DOWN_ANIMATION_VARIANTS}
           className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-12"
         >
-          Passionate about creating innovative digital solutions with modern technologies. 
-          I transform ideas into reality through clean code and exceptional user experiences.
+          Passionate about creating innovative digital solutions with modern
+          technologies. I transform ideas into reality through clean code and
+          exceptional user experiences.
         </motion.p>
 
-        <motion.div 
-          variants={FADE_DOWN_ANIMATION_VARIANTS} 
+        <motion.div
+          variants={FADE_DOWN_ANIMATION_VARIANTS}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
         >
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             onClick={() => scrollToSection("contact")}
             className="group relative overflow-hidden"
           >
@@ -185,11 +182,11 @@ export function HomeSection() {
               transition={{ duration: 0.6 }}
             />
           </Button>
-          
-          <Button 
-            variant="outline" 
+
+          <Button
+            variant="outline"
             size="lg"
-            onClick={() => window.open('/KwikAndreas_Resume.pdf', '_blank')}
+            onClick={() => window.open("/KwikAndreas_Resume.pdf", "_blank")}
             className="group"
           >
             <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
@@ -202,9 +199,21 @@ export function HomeSection() {
           className="flex justify-center space-x-6"
         >
           {[
-            { icon: Github, href: "https://github.com/KwikAndreas", label: "GitHub" },
-            { icon: Linkedin, href: "https://www.linkedin.com/in/kwik-jonathan/", label: "LinkedIn" },
-            { icon: Instagram, href: "https://www.instagram.com/kwikandreas/", label: "Instagram" },
+            {
+              icon: Github,
+              href: "https://github.com/KwikAndreas",
+              label: "GitHub",
+            },
+            {
+              icon: Linkedin,
+              href: "https://www.linkedin.com/in/kwik-jonathan/",
+              label: "LinkedIn",
+            },
+            {
+              icon: Instagram,
+              href: "https://www.instagram.com/kwikandreas/",
+              label: "Instagram",
+            },
           ].map(({ icon: Icon, href, label }) => (
             <motion.a
               key={label}
@@ -228,8 +237,8 @@ export function HomeSection() {
         transition={{ delay: 1.2, duration: 0.8, ease: "easeInOut" }}
         className="absolute bottom-10 z-10"
       >
-        <button 
-          onClick={() => scrollToSection("about")} 
+        <button
+          onClick={() => scrollToSection("about")}
           aria-label="Scroll down"
           className="flex flex-col items-center group focus:outline-none focus:ring-2 focus:ring-primary rounded-full p-2"
         >

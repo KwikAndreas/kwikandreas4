@@ -1,13 +1,11 @@
-import { Description } from "@radix-ui/react-dialog";
-import { supabase } from "@/lib/supabase";
-
-const toolsList = [
-  {
-    title: "",
-    desc: "",
-    target: "/cipher",
-  },
-];
+// Placeholder tools data - will be used for future tools page
+// const toolsList = [
+//   {
+//     title: "",
+//     desc: "",
+//     target: "/cipher",
+//   },
+// ];
 
 export default function Tools() {
   return (

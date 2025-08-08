@@ -3,7 +3,6 @@ import { Badge } from "@/components/ui/badge";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { motion } from "framer-motion";
 import { Calendar, Clock, Tag, ArrowRight } from "lucide-react";
-import Link from "next/link";
 import { FloatingNav } from "@/components/Navbar";
 
 export const metadata: Metadata = {
@@ -205,7 +204,7 @@ export default function Blog() {
                 More Articles Coming Soon!
               </h3>
               <p className="text-muted-foreground mb-6">
-                I'm currently working on exciting articles about modern web
+                I&apos;m currently working on exciting articles about modern web
                 development, game development techniques, and programming best
                 practices. Stay tuned for quality content!
               </p>

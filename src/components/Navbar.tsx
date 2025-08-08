@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useActiveSection } from "@/lib/hooks/use-active-section";
@@ -31,15 +31,19 @@ export function FloatingNav() {
   const router = useRouter();
   const pathname = usePathname();
 
-   const sectionIds = navItems
+  const sectionIds = navItems
     .filter((item) => item.type === "section")
     .map((item) => item.name.toLowerCase());
   const activeSection = useActiveSection(sectionIds);
 
-  const isHomePage = pathname === '/';
-  const isProjectDetailPage = pathname.startsWith('/projects/');
+  const isHomePage = pathname === "/";
+  const isProjectDetailPage = pathname.startsWith("/projects/");
 
-  const handleNavigation = (item: any) => {
+  const handleNavigation = (item: {
+    name: string;
+    href: string;
+    type: string;
+  }) => {
     if (item.type === "section") {
       // If on home page, scroll to section
       if (isHomePage) {
@@ -57,7 +61,7 @@ export function FloatingNav() {
     }
   };
 
-   const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({
@@ -71,7 +75,7 @@ export function FloatingNav() {
 
   useEffect(() => {
     if (isHomePage && window.location.hash) {
-      const sectionId = window.location.hash.replace('#', '');
+      const sectionId = window.location.hash.replace("#", "");
       setTimeout(() => {
         scrollToSection(sectionId);
       }, 100);
@@ -86,7 +90,7 @@ export function FloatingNav() {
     return null;
   }
 
-   return (
+  return (
     <>
       <motion.nav
         initial={{ y: -100, opacity: 0 }}
