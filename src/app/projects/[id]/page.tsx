@@ -1,5 +1,6 @@
 // app/projects/[id]/page.tsx
 "use client";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -15,19 +16,33 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { projects } from "@/components/sections/Projects";
 import { notFound } from "next/navigation";
-import { useState } from "react";
 import Head from "next/head";
 
 interface ProjectDetailPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
+
 export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
-  const projectId = params.id;
+  const [projectId, setProjectId] = useState<string | null>(null);
+
+  // Handle async params
+  useEffect(() => {
+    params.then(({ id }) => setProjectId(id));
+  }, [params]);
 
   const router = useRouter();
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
+  // Show loading while params are being resolved
+  if (!projectId) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary"></div>
+      </div>
+    );
+  }
 
   const project = projects.find((p) => p.id === projectId);
 
