@@ -27,13 +27,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Dynamic project pages
-  const projectPages = projects.map((project) => ({
-    url: `${baseUrl}/projects/${project.id}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
-  }));
+  // Dynamic project pages with error handling
+  const projectPages = Array.isArray(projects) 
+    ? projects.map((project) => ({
+        url: `${baseUrl}/projects/${project.id}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly" as const,
+        priority: 0.6,
+      }))
+    : [];
 
   return [...staticPages, ...projectPages];
 }
