@@ -81,7 +81,7 @@ export function HomeSection() {
         <motion.div className="mb-6">
           <GlassCard className="inline-block p-4 mb-8" glow>
             <span className="text-sm md:text-base text-muted-foreground font-medium tracking-wider uppercase">
-              👋 Hello, I'm
+              👋 Hello, I&apos;m
             </span>
           </GlassCard>
         </motion.div>
@@ -93,7 +93,7 @@ export function HomeSection() {
             </GradientText>
           </span>
           <div className="text-2xl md:text-4xl lg:text-5xl font-semibold text-muted-foreground">
-            I'm a <TypingAnimation words={roles} />
+            I&apos;m a <TypingAnimation words={roles} />
           </div>
         </motion.h1>
 

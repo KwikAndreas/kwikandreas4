@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { PerformanceMonitor } from "@/components/PerformanceMonitor";
 import { FloatingNav } from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -155,7 +154,6 @@ export default function RootLayout({
           <FloatingNav />
           {children}
           <Footer />
-          <PerformanceMonitor />
         </ThemeProvider>
       </body>
     </html>

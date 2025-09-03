@@ -1,6 +1,6 @@
 // components/sections/About.tsx
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -366,9 +366,9 @@ export function AboutSection() {
                         </div>
                         <div className="mt-auto p-3 bg-primary/10 rounded-lg">
                           <p className="text-xs text-muted-foreground italic text-center">
-                            "The best way to predict the future is to create it.
-                            That's why I'm passionate about building solutions
-                            that matter."
+                            &ldquo;The best way to predict the future is to
+                            create it. That&apos;s why I&apos;m passionate about
+                            building solutions that matter.&rdquo;
                           </p>
                         </div>
                       </div>

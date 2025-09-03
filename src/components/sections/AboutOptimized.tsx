@@ -164,8 +164,8 @@ export function AboutSection() {
             variants={itemVariants}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            I'm a passionate developer who loves creating digital experiences
-            that make a difference.
+            I&apos;m a passionate developer who loves creating digital
+            experiences that make a difference.
           </motion.p>
         </motion.div>
 
@@ -265,8 +265,8 @@ export function AboutSection() {
                       users love.
                     </p>
                     <p className="text-muted-foreground leading-relaxed">
-                      When I'm not coding, you'll find me exploring new
-                      technologies, contributing to open source projects, or
+                      When I&apos;m not coding, you&apos;ll find me exploring
+                      new technologies, contributing to open source projects, or
                       sharing knowledge with the developer community.
                     </p>
                   </div>

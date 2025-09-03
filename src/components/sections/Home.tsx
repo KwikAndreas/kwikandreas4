@@ -4,17 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Instagram, Download } from "lucide-react";
 import { useState, useEffect } from "react";
-import {
-  GlassCard,
-  FloatingElement,
-  GradientText,
-  ParticleBackground,
-  MorphingShape,
-} from "@/components/animations/ReactBitsComponents";
-import {
-  StaggerContainer,
-  HoverAnimation,
-} from "@/components/animations/AnimatedContainer";
+import { GradientText } from "@/components/animations/ReactBitsComponents";
 
 function TypingAnimation({ words }: { words: string[] }) {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
