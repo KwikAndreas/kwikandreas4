@@ -61,8 +61,8 @@ export default function BlogClient() {
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Dive into the world of modern development with articles covering web
-            development, game development, programming tutorials, and tech insights.
-            Stay updated with the latest trends and best practices.
+            development, game development, programming tutorials, and tech
+            insights. Stay updated with the latest trends and best practices.
           </p>
         </motion.div>
 
@@ -126,10 +126,12 @@ export default function BlogClient() {
           className="text-center py-16 border rounded-xl bg-muted/30"
         >
           <div className="max-w-md mx-auto">
-            <h3 className="text-2xl font-bold mb-4">More Articles Coming Soon!</h3>
+            <h3 className="text-2xl font-bold mb-4">
+              More Articles Coming Soon!
+            </h3>
             <p className="text-muted-foreground mb-6">
-              I&apos;m working on more in-depth tutorials and technical articles.
-              Stay tuned for updates!
+              I&apos;m working on more in-depth tutorials and technical
+              articles. Stay tuned for updates!
             </p>
             <Badge variant="outline">🚀 In Development</Badge>
           </div>

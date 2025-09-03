@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { PerformanceMonitor } from "@/components/PerformanceMonitor";
+import { FloatingNav } from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const inter = Inter({
@@ -12,31 +15,69 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://kwikandreas.vercel.app"),
   title: {
-    default: "KwikAndreas - Full Stack Developer & Game Developer",
-    template: "%s | KwikAndreas",
+    default:
+      "Kwik Andreas Jonathan - Full Stack Developer & Game Developer Portfolio",
+    template: "%s | Kwik Andreas Jonathan",
   },
   description:
-    "Experienced Full Stack Developer specializing in web development, game development, and mobile applications. Expert in React, Next.js, Unity, and modern web technologies.",
+    "Kwik Andreas Jonathan - Experienced Full Stack Developer specializing in web development, game development, and mobile applications. Expert in React, Next.js, Unity, and modern web technologies. Based in Indonesia.",
   keywords: [
+    // Personal name variations for better targeting
+    "Kwik Andreas Jonathan",
+    "Andreas Jonathan Kwik",
+    "Andreas Kwik",
+    "Kwik Andreas",
+    "Jonathan Kwik",
+    "kwikandreas",
+    "Andreas Jonathan developer",
+    "Kwik Andreas developer Indonesia",
+
+    // Professional keywords
     "full stack developer",
     "web developer",
     "game developer",
     "react developer",
     "next.js developer",
     "unity developer",
-    "javascript",
-    "typescript",
-    "portfolio",
-    "web development",
-    "game development",
-    "mobile development",
+    "javascript developer",
+    "typescript developer",
     "frontend developer",
     "backend developer",
-    "indonesia developer",
+    "mobile developer",
+
+    // Technology stack
+    "react.js",
+    "next.js",
+    "unity 3d",
+    "node.js",
+    "javascript",
+    "typescript",
+    "python",
+    "c#",
+    "supabase",
+    "firebase",
+
+    // Portfolio & services
+    "portfolio website",
+    "web development services",
+    "game development services",
+    "mobile app development",
+    "freelance developer",
+    "software engineer",
+
+    // Location-based
+    "developer indonesia",
+    "web developer jakarta",
+    "programmer indonesia",
+    "software engineer indonesia",
+    "bina nusantara developer",
+    "binusian developer",
   ],
-  authors: [{ name: "Andreas", url: "https://kwikandreas.vercel.app" }],
-  creator: "Andreas",
-  publisher: "Andreas",
+  authors: [
+    { name: "Kwik Andreas Jonathan", url: "https://kwikandreas.vercel.app" },
+  ],
+  creator: "Kwik Andreas Jonathan",
+  publisher: "Kwik Andreas Jonathan",
   robots: {
     index: true,
     follow: true,
@@ -53,16 +94,16 @@ export const metadata: Metadata = {
     locale: "en_US",
     alternateLocale: ["id_ID"],
     url: "https://kwikandreas.vercel.app",
-    siteName: "KwikAndreas Portfolio",
-    title: "KwikAndreas - Full Stack Developer & Game Developer",
+    siteName: "Kwik Andreas Jonathan Portfolio",
+    title: "Kwik Andreas Jonathan - Full Stack Developer & Game Developer",
     description:
-      "Experienced Full Stack Developer specializing in web development, game development, and mobile applications. Expert in React, Next.js, Unity, and modern web technologies.",
+      "Kwik Andreas Jonathan - Experienced Full Stack Developer specializing in web development, game development, and mobile applications. Expert in React, Next.js, Unity, and modern web technologies. Based in Indonesia.",
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "KwikAndreas - Full Stack Developer Portfolio",
+        alt: "Kwik Andreas Jonathan - Full Stack Developer Portfolio",
         type: "image/jpeg",
       },
     ],
@@ -71,9 +112,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@kwikandreas",
     creator: "@kwikandreas",
-    title: "KwikAndreas - Full Stack Developer & Game Developer",
+    title: "Kwik Andreas Jonathan - Full Stack Developer & Game Developer",
     description:
-      "Experienced Full Stack Developer specializing in web development, game development, and mobile applications.",
+      "Kwik Andreas Jonathan - Experienced Full Stack Developer specializing in web development, game development, and mobile applications. Based in Indonesia.",
     images: ["/images/og-image.jpg"],
   },
   verification: {
@@ -111,7 +152,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <FloatingNav />
           {children}
+          <Footer />
+          <PerformanceMonitor />
         </ThemeProvider>
       </body>
     </html>

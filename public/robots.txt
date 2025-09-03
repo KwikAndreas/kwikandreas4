@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# High priority pages
+Allow: /
+Allow: /projects/*
+Allow: /blog
+Allow: /tools
+
+# Sitemaps
+Sitemap: https://kwikandreas.vercel.app/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1

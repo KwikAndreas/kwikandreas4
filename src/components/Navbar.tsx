@@ -49,10 +49,21 @@ export function FloatingNav() {
       if (isHomePage) {
         scrollToSection(item.href);
       } else {
-        // Navigate to home page with section hash
-        router.push(`/#${item.href}`);
+        // Navigate to home page first, then scroll to section after page loads
+        router.push("/");
         setIsMobileMenuOpen(false);
         setActiveDropdown(null);
+
+        // Scroll to section after navigation
+        setTimeout(() => {
+          const element = document.getElementById(item.href);
+          if (element) {
+            element.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        }, 100);
       }
     } else if (item.type === "page") {
       router.push(item.href);
@@ -78,6 +89,10 @@ export function FloatingNav() {
       const sectionId = window.location.hash.replace("#", "");
       setTimeout(() => {
         scrollToSection(sectionId);
+        // Clean up the hash from URL after scrolling
+        if (window.history.replaceState) {
+          window.history.replaceState(null, "", "/");
+        }
       }, 100);
     }
   }, [isHomePage]);

@@ -4,6 +4,17 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Instagram, Download } from "lucide-react";
 import { useState, useEffect } from "react";
+import {
+  GlassCard,
+  FloatingElement,
+  GradientText,
+  ParticleBackground,
+  MorphingShape,
+} from "@/components/animations/ReactBitsComponents";
+import {
+  StaggerContainer,
+  HoverAnimation,
+} from "@/components/animations/AnimatedContainer";
 
 function TypingAnimation({ words }: { words: string[] }) {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -34,10 +45,13 @@ function TypingAnimation({ words }: { words: string[] }) {
   }, [currentText, isDeleting, currentWordIndex, words]);
 
   return (
-    <span className="text-primary">
+    <GradientText
+      gradient="rainbow"
+      className="text-4xl md:text-6xl lg:text-7xl font-bold"
+    >
       {currentText}
       <span className="animate-pulse">|</span>
-    </span>
+    </GradientText>
   );
 }
 

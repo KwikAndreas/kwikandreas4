@@ -28,7 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   // Dynamic project pages with error handling
-  const projectPages = Array.isArray(projects) 
+  const projectPages = Array.isArray(projects)
     ? projects.map((project) => ({
         url: `${baseUrl}/projects/${project.id}`,
         lastModified: new Date(),
