@@ -99,11 +99,11 @@ export const metadata: Metadata = {
       "Kwik Andreas Jonathan - Experienced Full Stack Developer specializing in web development, game development, and mobile applications. Expert in React, Next.js, Unity, and modern web technologies. Based in Indonesia.",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/bitgrow.png",
         width: 1200,
         height: 630,
         alt: "Kwik Andreas Jonathan - Full Stack Developer Portfolio",
-        type: "image/jpeg",
+        type: "image/png",
       },
     ],
   },
@@ -114,10 +114,10 @@ export const metadata: Metadata = {
     title: "Kwik Andreas Jonathan - Full Stack Developer & Game Developer",
     description:
       "Kwik Andreas Jonathan - Experienced Full Stack Developer specializing in web development, game development, and mobile applications. Based in Indonesia.",
-    images: ["/images/og-image.jpg"],
+    images: ["/images/bitgrow.png"],
   },
   verification: {
-    google: "your-google-verification-code",
+    google: "wCJ4618uQYlQOFViXg5BBcMRC20LpuWdasmIM0iAk80",
     // yandex: "your-yandex-verification-code",
     // bing: "your-bing-verification-code",
   },

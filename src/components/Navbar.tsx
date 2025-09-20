@@ -10,7 +10,6 @@ import { useRouter, usePathname } from "next/navigation";
 const navItems = [
   { name: "Home", href: "home", type: "section" },
   { name: "About", href: "about", type: "section" },
-  { name: "Achievements", href: "achievements", type: "section" },
   { name: "Stack", href: "stack", type: "section" },
   {
     name: "Projects",
@@ -22,6 +21,7 @@ const navItems = [
       { name: "Tools", href: "/tools", type: "page" },
     ],
   },
+  { name: "Achievement", href: "achievement", type: "section" },
   { name: "Contact", href: "contact", type: "section" },
 ];
 
@@ -33,7 +33,17 @@ export function FloatingNav() {
 
   const sectionIds = navItems
     .filter((item) => item.type === "section")
-    .map((item) => item.name.toLowerCase());
+    .map((item) => item.href)
+    .concat(
+      navItems
+        .filter((item) => item.type === "dropdown")
+        .flatMap(
+          (item) =>
+            item.dropdownItems
+              ?.filter((sub) => sub.type === "section")
+              .map((sub) => sub.href) || []
+        )
+    );
   const activeSection = useActiveSection(sectionIds);
 
   const isHomePage = pathname === "/";

@@ -39,7 +39,7 @@ const achievements = [
   },
   {
     icon: Award,
-    title: "7 Certifications",
+    title: "6 Certifications",
     description: "Industry recognized certifications",
   },
 ];

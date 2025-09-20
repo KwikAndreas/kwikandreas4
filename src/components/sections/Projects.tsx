@@ -25,6 +25,81 @@ import { useRouter } from "next/navigation";
 
 const projects = [
   {
+    id: "organization-merchandise",
+    title: "BIOS Merchandise",
+    category: "Web Development",
+    client: "Organization Project",
+    duration: "5 days",
+    description:
+      "E-commerce platform untuk penjualan merchandise organisasi BIOS dengan sistem katalog produk.",
+    fullDescription:
+      "Platform e-commerce komprehensif yang dikembangkan khusus untuk organisasi BIOS (Bioinformatics Student Organization). Fitur mencakup katalog produk interaktif, sistem keranjang belanja, integrasi payment gateway Stripe, order tracking, dan dashboard admin untuk manajemen produk dan pesanan.",
+    background:
+      "Organisasi BIOS membutuhkan platform digital untuk menjual merchandise resmi seperti kaos, tote bag, dan aksesoris lainnya kepada mahasiswa dan alumni. Sebelumnya penjualan dilakukan secara manual yang tidak efisien dan sulit untuk tracking.",
+    objectives: [
+      "Digitalisasi sistem penjualan merchandise organisasi",
+      "Menyediakan platform yang user-friendly untuk mahasiswa berbelanja",
+      "Implementasi sistem payment yang aman dan terpercaya",
+      "Memberikan dashboard admin untuk manajemen inventory dan orders",
+    ],
+    images: ["/project/merchbios.webp"],
+    image: "/project/merchbios.webp",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Stripe API",
+      "Prisma",
+      "PostgreSQL",
+    ],
+    liveLink: "https://merchbios.vercel.app",
+    githubLink: "https://github.com/KwikAndreas/merchbios",
+    featured: true,
+    stats: {
+      completionDate: "September 2025",
+      rating: 5.0,
+    },
+    status: "Live",
+  },
+  {
+    id: "hima-bios",
+    title: "Hima BIOS",
+    category: "Web Development",
+    client: "Organization Project",
+    duration: "2 weeks",
+    description:
+      "Website resmi Himpunan Mahasiswa BIOS dengan fitur informasi organisasi.",
+    fullDescription:
+      "Website institusional untuk Himpunan Mahasiswa Bioinformatika (HIMA BIOS) yang berfungsi sebagai hub informasi dan komunikasi. Platform ini menampilkan profil organisasi, struktur kepengurusan, agenda kegiatan, blog artikel bioinformatika.",
+    background:
+      "HIMA BIOS membutuhkan presence digital yang profesional untuk meningkatkan visibilitas organisasi, mempermudah komunikasi dengan mahasiswa, dan sebagai platform informasi terpusat. Website lama tidak responsive dan sulit diupdate oleh pengurus.",
+    objectives: [
+      "Meningkatkan brand awareness dan profesionalisme organisasi",
+      "Menyediakan platform informasi terpusat untuk mahasiswa",
+      "Memfasilitasi registrasi dan komunikasi event secara digital",
+      "Memberikan portal anggota untuk akses konten eksklusif",
+    ],
+    images: ["/project/himabios.webp"],
+    image: "/project/himabios.webp",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "React Hook Form",
+      "Framer Motion",
+    ],
+    liveLink: "#",
+    githubLink: "https://github.com/KwikAndreas/himabios",
+    featured: false,
+    stats: {
+      users: "50+",
+      rating: 4.8,
+      completionDate: "September 2025",
+    },
+    status: "In Development",
+  },
+  {
     id: "gki-cipinang-indah",
     title: "GKI Cipinang Indah",
     category: "Web Development",
@@ -202,7 +277,7 @@ function ProjectCard({
       viewport={{ once: true }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      className={`group ${project.featured ? "md:col-span-2" : ""}`}
+      className="group"
     >
       <Card className="h-full overflow-hidden bg-background/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
         {/* Project Image */}
@@ -469,7 +544,7 @@ export function ProjectsSection() {
           ))}
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
           {filteredProjects.map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} />
           ))}
