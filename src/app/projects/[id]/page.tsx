@@ -15,7 +15,7 @@ import {
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { projects } from "@/components/sections/Projects";
-import { notFound } from "next/navigation";
+// import { notFound } from "next/navigation";
 import Head from "next/head";
 
 interface ProjectDetailPageProps {
@@ -68,7 +68,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">Project Not Found</h1>
           <p className="text-muted-foreground mb-8">
-            The project you're looking for doesn't exist.
+            The project you&apos;re looking for doesn&apos;t exist.
           </p>
           <Button onClick={() => router.push("/#projects")}>
             <ArrowLeft className="w-4 h-4 mr-2" />
