@@ -123,7 +123,7 @@ const projects = [
       "/project/gkicinda_jadwal.webp",
       "/project/gkicinda_download.webp",
     ],
-    image: "/project/gkicinda.webp",
+    image: "/project/gkicinda_home.webp",
     technologies: [
       "Next.js",
       "TypeScript",
