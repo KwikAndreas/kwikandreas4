@@ -25,7 +25,7 @@ import { useRouter } from "next/navigation";
 
 const projects = [
   {
-    id: "organization-merchandise",
+    id: "biosmerch",
     title: "BIOS Merchandise",
     category: "Web Development",
     client: "Organization Project",
@@ -54,15 +54,16 @@ const projects = [
     ],
     liveLink: "https://merchbios.vercel.app",
     githubLink: "https://github.com/KwikAndreas/merchbios",
-    featured: true,
+    featured: false,
     stats: {
+      users: "120+",
       completionDate: "September 2025",
-      rating: 5.0,
+      rating: 4.5,
     },
     status: "Live",
   },
   {
-    id: "hima-bios",
+    id: "himabios",
     title: "Hima BIOS",
     category: "Web Development",
     client: "Organization Project",
@@ -79,25 +80,23 @@ const projects = [
       "Memfasilitasi registrasi dan komunikasi event secara digital",
       "Memberikan portal anggota untuk akses konten eksklusif",
     ],
-    images: ["/project/himabios.webp"],
-    image: "/project/himabios.webp",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Supabase",
-      "React Hook Form",
-      "Framer Motion",
+    images: [
+      "/project/himabios.webp",
+      "/project/himabios_learn.webp",
+      "/project/himabios_about.webp",
+      "/project/himabios_announcement.webp",
     ],
-    liveLink: "#",
+    image: "/project/himabios.webp",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React Hook Form"],
+    liveLink: "https://himabios.vercel.app",
     githubLink: "https://github.com/KwikAndreas/himabios",
     featured: false,
     stats: {
-      users: "50+",
-      rating: 4.8,
+      users: "120+",
+      rating: 5.0,
       completionDate: "September 2025",
     },
-    status: "In Development",
+    status: "Live",
   },
   {
     id: "gki-cipinang-indah",
@@ -121,21 +120,20 @@ const projects = [
       "/project/gkicinda_home.webp",
       "/project/gkicinda_youtube.webp",
       "/project/gkicinda_jadwal.webp",
+      "/project/gkicinda_renungan.webp",
+      "/project/gkicinda_profile.webp",
+      "/project/gkicinda_artikel.webp",
+      "/project/gkicinda_info.webp",
+      "/project/gkicinda_kalender.webp",
       "/project/gkicinda_download.webp",
     ],
     image: "/project/gkicinda_home.webp",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "PostgreSQL",
-      "Tailwind CSS",
-      "Stripe",
-    ],
+    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS"],
     liveLink: "https://gkicinda.id",
     githubLink: "https://github.com/KwikAndreas/GKI-CINDA",
     featured: true,
     stats: {
-      users: "100+",
+      users: "700+",
       completionDate: "August 2025",
     },
     status: "Live",
@@ -266,7 +264,8 @@ function ProjectCard({
   const router = useRouter();
 
   const handleViewDetails = () => {
-    router.push(`/projects/${project.id}`);
+    // Use window.location for more reliable navigation
+    window.location.href = `/projects/${project.id}`;
   };
 
   return (
@@ -456,7 +455,12 @@ function ProjectCard({
               </Button>
             )}
 
-            <Button onClick={handleViewDetails} size="sm" className="flex-1">
+            <Button
+              onClick={handleViewDetails}
+              size="sm"
+              className="flex-1"
+              type="button"
+            >
               <ArrowRight className="w-4 h-4 mr-2" />
               View Details
             </Button>

@@ -1,6 +1,6 @@
 // app/projects/[id]/page.tsx
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, use } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -25,29 +25,58 @@ interface ProjectDetailPageProps {
 }
 
 export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
-  const [projectId, setProjectId] = useState<string | null>(null);
-
-  // Handle async params
-  useEffect(() => {
-    params.then(({ id }) => setProjectId(id));
-  }, [params]);
-
   const router = useRouter();
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
-  // Show loading while params are being resolved
-  if (!projectId) {
+  // Unwrap params Promise using React.use()
+  const resolvedParams = use(params);
+  const projectId = decodeURIComponent(resolvedParams.id);
+  const project = projects.find((p) => p.id === projectId);
+
+  useEffect(() => {
+    // Add loading state management
+    setIsLoading(false);
+
+    // Log for debugging
+    console.log("Project ID:", projectId);
+    console.log("Found project:", project);
+
+    if (!project) {
+      console.log("Project not found, redirecting...");
+      // Redirect to projects section if project not found
+      router.replace("/#projects");
+    }
+  }, [projectId, project, router]);
+
+  if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary"></div>
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary mx-auto"></div>
+          <p className="mt-4 text-muted-foreground">
+            Loading project details...
+          </p>
+        </div>
       </div>
     );
   }
 
-  const project = projects.find((p) => p.id === projectId);
-
   if (!project) {
-    notFound();
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold mb-4">Project Not Found</h1>
+          <p className="text-muted-foreground mb-8">
+            The project you're looking for doesn't exist.
+          </p>
+          <Button onClick={() => router.push("/#projects")}>
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Projects
+          </Button>
+        </div>
+      </div>
+    );
   }
 
   // SEO structured data for project

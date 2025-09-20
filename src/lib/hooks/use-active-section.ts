@@ -1,7 +1,10 @@
 // lib/hooks/use-active-section.ts
 import { useState, useEffect, useRef, useCallback } from "react";
 
-export function useActiveSection(sectionIds: string[]) {
+export function useActiveSection(
+  sectionIds: string[],
+  enabled: boolean = true
+) {
   const [activeSection, setActiveSection] = useState<string>(sectionIds[0]);
   const observer = useRef<IntersectionObserver | null>(null);
   const sectionsInView = useRef<Set<string>>(new Set());
@@ -48,6 +51,11 @@ export function useActiveSection(sectionIds: string[]) {
   }, [sectionIds, activeSection]);
 
   useEffect(() => {
+    // Skip setup if not enabled
+    if (!enabled) {
+      return;
+    }
+
     // Intersection Observer for tracking sections in viewport
     observer.current = new IntersectionObserver(
       (entries) => {
@@ -106,7 +114,7 @@ export function useActiveSection(sectionIds: string[]) {
         clearTimeout(scrollTimeout);
       }
     };
-  }, [sectionIds, determineActiveSection]);
+  }, [sectionIds, determineActiveSection, enabled]);
 
   return activeSection;
 }

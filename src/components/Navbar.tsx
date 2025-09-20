@@ -31,6 +31,9 @@ export function FloatingNav() {
   const router = useRouter();
   const pathname = usePathname();
 
+  const isHomePage = pathname === "/";
+  const isProjectDetailPage = pathname.startsWith("/projects/");
+
   const sectionIds = navItems
     .filter((item) => item.type === "section")
     .map((item) => item.href)
@@ -44,10 +47,10 @@ export function FloatingNav() {
               .map((sub) => sub.href) || []
         )
     );
-  const activeSection = useActiveSection(sectionIds);
 
-  const isHomePage = pathname === "/";
-  const isProjectDetailPage = pathname.startsWith("/projects/");
+  // Always call the hook, but only enable on home page
+  const detectedActiveSection = useActiveSection(sectionIds, isHomePage);
+  const activeSection = isHomePage ? detectedActiveSection : "";
 
   const handleNavigation = (item: {
     name: string;
