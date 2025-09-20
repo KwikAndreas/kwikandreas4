@@ -1,6 +1,6 @@
 // app/sitemap.ts
 import { MetadataRoute } from "next";
-import { projects } from "@/components/sections/Projects";
+import { projects } from "@/lib/projects-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://kwikandreas.vercel.app";
