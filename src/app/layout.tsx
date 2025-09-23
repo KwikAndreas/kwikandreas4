@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     "Kwik Andreas Jonathan - Experienced Full Stack Developer specializing in web development, game development, and mobile applications. Expert in React, Next.js, Unity, and modern web technologies. Based in Indonesia.",
   keywords: [
     // Personal name variations for better targeting
+    "Kwik Andreas",
     "Kwik Andreas Jonathan",
     "Andreas Jonathan Kwik",
     "Andreas Kwik",
