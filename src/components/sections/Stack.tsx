@@ -136,6 +136,19 @@ function TechCard({
 
   const shouldInvert = mounted && tech.invertOnDark && theme === "dark";
 
+  const cardBgClass =
+    mounted && theme === "light"
+      ? "bg-gray-100"
+      : mounted && theme === "dark"
+      ? "bg-black/30"
+      : "bg-grey-100";
+
+  const borderClass =
+    mounted && theme === "dark" ? "border-white/20" : "border-black/10";
+
+  const textClass =
+    mounted && theme === "dark" ? "text-white" : "text-neutral-800";
+
   return (
     <motion.div
       variants={fadeInAnimation}
@@ -146,7 +159,9 @@ function TechCard({
       className="flex justify-center"
     >
       <CardContainer className="inter-var" containerClassName="py-2">
-        <CardBody className="bg-gray-100 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black/30 dark:border-white/[0.2] border-black/[0.1] w-[180px] h-[200px] rounded-xl p-6 border flex flex-col items-center justify-center">
+        <CardBody
+          className={`relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] !w-[180px] !h-[200px] rounded-xl p-6 border flex flex-col items-center justify-center ${cardBgClass} ${borderClass}`}
+        >
           <CardItem
             translateZ="150"
             rotateX={20}
@@ -172,7 +187,7 @@ function TechCard({
           </CardItem>
           <CardItem
             translateZ="50"
-            className="text-lg font-bold text-neutral-600 dark:text-white text-center"
+            className={`text-lg font-bold text-center ${textClass}`}
           >
             {tech.name}
           </CardItem>

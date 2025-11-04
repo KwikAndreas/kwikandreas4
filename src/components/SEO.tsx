@@ -49,7 +49,6 @@ export function SEO({
 
   return (
     <Head>
-      {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -61,7 +60,6 @@ export function SEO({
       />
       <link rel="canonical" href={fullUrl} />
 
-      {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
@@ -71,7 +69,6 @@ export function SEO({
       <meta property="og:locale" content="en_US" />
       <meta property="og:locale:alternate" content="id_ID" />
 
-      {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
@@ -79,7 +76,6 @@ export function SEO({
       <meta name="twitter:creator" content="@kwikandreas" />
       <meta name="twitter:site" content="@kwikandreas" />
 
-      {/* Article specific meta tags */}
       {type === "article" && (
         <>
           {publishedTime && (

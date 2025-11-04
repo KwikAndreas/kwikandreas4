@@ -21,18 +21,17 @@ export const metadata: Metadata = {
   description:
     "Kwik Andreas Jonathan - Experienced Full Stack Developer specializing in web development, game development, and mobile applications. Expert in React, Next.js, Unity, and modern web technologies. Based in Indonesia.",
   keywords: [
-    // Personal name variations for better targeting
+    "Kwik",
     "Kwik Andreas",
     "Kwik Andreas Jonathan",
     "Andreas Jonathan Kwik",
     "Andreas Kwik",
-    "Kwik Andreas",
+    "KwikAndreas",
     "Jonathan Kwik",
     "kwikandreas",
     "Andreas Jonathan developer",
     "Kwik Andreas developer Indonesia",
 
-    // Professional keywords
     "full stack developer",
     "web developer",
     "game developer",
@@ -45,7 +44,6 @@ export const metadata: Metadata = {
     "backend developer",
     "mobile developer",
 
-    // Technology stack
     "react.js",
     "next.js",
     "unity 3d",
@@ -57,7 +55,6 @@ export const metadata: Metadata = {
     "supabase",
     "firebase",
 
-    // Portfolio & services
     "portfolio website",
     "web development services",
     "game development services",
@@ -65,13 +62,10 @@ export const metadata: Metadata = {
     "freelance developer",
     "software engineer",
 
-    // Location-based
     "developer indonesia",
     "web developer jakarta",
     "programmer indonesia",
     "software engineer indonesia",
-    "bina nusantara developer",
-    "binusian developer",
   ],
   authors: [
     { name: "Kwik Andreas Jonathan", url: "https://kwikandreas.vercel.app" },

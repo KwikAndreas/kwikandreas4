@@ -3,10 +3,8 @@ html,
 body {
   scroll-behavior: smooth !important;
 }
-@import "tailwindcss";
-@import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
+@import "tailwindcss";
 
 @layer base {
   :root {
