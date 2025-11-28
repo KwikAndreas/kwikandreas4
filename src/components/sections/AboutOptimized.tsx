@@ -202,6 +202,15 @@ export function AboutSection() {
                   <h3 className="text-xl font-bold mb-3">
                     Kwik Andreas Jonathan
                   </h3>
+
+                  {/* Hidden SEO content with name variations */}
+                  <div className="sr-only">
+                    <p>KwikAndreas - Full Stack Developer Indonesia</p>
+                    <p>Kwik Andreas Jonathan, also known as KwikAndreas</p>
+                    <p>Andreas Jonathan Kwik portfolio website</p>
+                    <p>Professional web developer Kwik Andreas</p>
+                  </div>
+
                   <div className="space-y-2 text-sm text-muted-foreground">
                     <div className="flex items-center justify-center gap-2">
                       <MapPin className="w-4 h-4" />

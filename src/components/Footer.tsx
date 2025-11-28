@@ -12,8 +12,14 @@ export default function Footer() {
         </div>
         <div className="mt-8 md:order-1 md:mt-0">
           <p className="text-center text-xs leading-5 text-muted-foreground">
-            &copy; 2025 Kwik Andreas. All rights reserved.
+            &copy; 2025 Kwik Andreas Jonathan (KwikAndreas). All rights
+            reserved.
           </p>
+          {/* Hidden SEO text for footer */}
+          <div className="sr-only">
+            <p>Website by Kwik Andreas Jonathan, also known as KwikAndreas</p>
+            <p>Portfolio developed by Andreas Jonathan Kwik</p>
+          </div>
         </div>
       </div>
     </footer>

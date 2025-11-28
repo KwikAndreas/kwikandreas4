@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { FloatingNav } from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { seoKeywords } from "@/lib/seo/structured-data";
 import "./globals.css";
 
 const inter = Inter({
@@ -15,58 +16,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://kwikandreas.vercel.app"),
   title: {
     default:
-      "Kwik Andreas Jonathan - Full Stack Developer & Game Developer Portfolio",
-    template: "%s | Kwik Andreas Jonathan",
+      "Kwik Andreas Jonathan | KwikAndreas - Full Stack Developer & Game Developer Portfolio",
+    template: "%s | Kwik Andreas | KwikAndreas",
   },
   description:
-    "Kwik Andreas Jonathan - Experienced Full Stack Developer specializing in web development, game development, and mobile applications. Expert in React, Next.js, Unity, and modern web technologies. Based in Indonesia.",
-  keywords: [
-    "Kwik",
-    "Kwik Andreas",
-    "Kwik Andreas Jonathan",
-    "Andreas Jonathan Kwik",
-    "Andreas Kwik",
-    "KwikAndreas",
-    "Jonathan Kwik",
-    "kwikandreas",
-    "Andreas Jonathan developer",
-    "Kwik Andreas developer Indonesia",
-
-    "full stack developer",
-    "web developer",
-    "game developer",
-    "react developer",
-    "next.js developer",
-    "unity developer",
-    "javascript developer",
-    "typescript developer",
-    "frontend developer",
-    "backend developer",
-    "mobile developer",
-
-    "react.js",
-    "next.js",
-    "unity 3d",
-    "node.js",
-    "javascript",
-    "typescript",
-    "python",
-    "c#",
-    "supabase",
-    "firebase",
-
-    "portfolio website",
-    "web development services",
-    "game development services",
-    "mobile app development",
-    "freelance developer",
-    "software engineer",
-
-    "developer indonesia",
-    "web developer jakarta",
-    "programmer indonesia",
-    "software engineer indonesia",
-  ],
+    "Kwik Andreas Jonathan (KwikAndreas) - Experienced Full Stack Developer specializing in web development, game development, and mobile applications. Known as Kwik Andreas or KwikAndreas, expert in React, Next.js, Unity, and modern web technologies. Based in Indonesia.",
+  keywords: seoKeywords,
   authors: [
     { name: "Kwik Andreas Jonathan", url: "https://kwikandreas.vercel.app" },
   ],
@@ -88,10 +43,11 @@ export const metadata: Metadata = {
     locale: "en_US",
     alternateLocale: ["id_ID"],
     url: "https://kwikandreas.vercel.app",
-    siteName: "Kwik Andreas Jonathan Portfolio",
-    title: "Kwik Andreas Jonathan - Full Stack Developer & Game Developer",
+    siteName: "Kwik Andreas Jonathan | KwikAndreas Portfolio",
+    title:
+      "Kwik Andreas Jonathan | KwikAndreas - Full Stack Developer & Game Developer",
     description:
-      "Kwik Andreas Jonathan - Experienced Full Stack Developer specializing in web development, game development, and mobile applications. Expert in React, Next.js, Unity, and modern web technologies. Based in Indonesia.",
+      "Kwik Andreas Jonathan (KwikAndreas) - Experienced Full Stack Developer specializing in web development, game development, and mobile applications. Expert in React, Next.js, Unity, and modern web technologies. Based in Indonesia.",
     images: [
       {
         url: "/images/bitgrow.png",
@@ -106,9 +62,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@kwikandreas",
     creator: "@kwikandreas",
-    title: "Kwik Andreas Jonathan - Full Stack Developer & Game Developer",
+    title:
+      "Kwik Andreas Jonathan | KwikAndreas - Full Stack Developer & Game Developer",
     description:
-      "Kwik Andreas Jonathan - Experienced Full Stack Developer specializing in web development, game development, and mobile applications. Based in Indonesia.",
+      "Kwik Andreas Jonathan (KwikAndreas) - Experienced Full Stack Developer specializing in web development, game development, and mobile applications. Based in Indonesia.",
     images: ["/images/bitgrow.png"],
   },
   verification: {
@@ -138,6 +95,37 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="format-detection" content="telephone=no" />
+
+        {/* Additional SEO meta tags for name variations */}
+        <meta name="author" content="Kwik Andreas Jonathan" />
+        <meta name="creator" content="KwikAndreas" />
+        <meta name="designer" content="Kwik Andreas" />
+        <meta name="developer" content="Andreas Jonathan Kwik" />
+        <meta
+          name="subject"
+          content="Kwik Andreas Jonathan Portfolio - Full Stack Developer"
+        />
+        <meta
+          name="abstract"
+          content="Professional portfolio of Kwik Andreas Jonathan (KwikAndreas), showcasing web development and game development projects"
+        />
+        <meta name="topic" content="Full Stack Developer Portfolio Indonesia" />
+        <meta
+          name="summary"
+          content="Kwik Andreas Jonathan, also known as KwikAndreas, is a skilled Full Stack Developer from Indonesia specializing in React, Next.js, and Unity development"
+        />
+        <meta
+          name="classification"
+          content="Technology, Web Development, Game Development"
+        />
+        <meta name="owner" content="Kwik Andreas Jonathan" />
+        <meta name="reply-to" content="kwikandreasjoe@gmail.com" />
+        <meta name="directory" content="submission" />
+        <meta name="category" content="Portfolio, Technology, Developer" />
+        <meta name="coverage" content="Worldwide" />
+        <meta name="distribution" content="Global" />
+        <meta name="rating" content="General" />
+        <meta name="revisit-after" content="7 days" />
       </head>
       <body className={`${inter.className} antialiased`}>
         <ThemeProvider

@@ -168,6 +168,23 @@ export function HomeSection() {
           exceptional user experiences.
         </motion.p>
 
+        {/* Hidden text for SEO - contains variations of the name */}
+        <div className="sr-only">
+          <h2>Kwik Andreas Jonathan Portfolio</h2>
+          <p>
+            KwikAndreas developer, Kwik Andreas full stack developer, Andreas
+            Jonathan Kwik game developer
+          </p>
+          <p>
+            Portfolio website oleh Kwik Andreas, dikenal juga sebagai
+            KwikAndreas
+          </p>
+          <p>
+            Kwik Andreas Jonathan - Web Developer Indonesia, Game Developer,
+            Mobile Developer
+          </p>
+        </div>
+
         <motion.div
           variants={FADE_DOWN_ANIMATION_VARIANTS}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"

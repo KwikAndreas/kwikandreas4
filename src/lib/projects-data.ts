@@ -1,6 +1,79 @@
 // lib/projects-data.ts
 export const projects = [
   {
+    id: "biosfest",
+    title: "BIOS Festival",
+    category: "Web Development",
+    client: "Organization Project",
+    duration: "2 Weeks",
+    description:
+      "Website Resmi Seminar dan Lomba Nasional BIOS Festival dengan fitur pendaftaran online dan informasi acara.",
+    fullDescription:
+      "Website institusional untuk acara tahunan BIOS Festival yang menampilkan informasi lengkap tentang seminar, lomba, pembicara, jadwal acara, dan formulir pendaftaran online.",
+    background:
+      "BIOS Festival adalah acara tahunan yang diselenggarakan oleh Himpunan Mahasiswa Bioinformatika (HIMA BIOS). Acara ini bertujuan untuk meningkatkan pengetahuan dan keterampilan mahasiswa di bidang bioinformatika melalui seminar dan kompetisi. Sebelumnya, pendaftaran dilakukan secara manual yang menyulitkan peserta dan panitia.",
+    objectives: [
+      "Meningkatkan brand awareness acara BIOS Festival",
+      "Menyediakan platform pendaftaran online yang efisien",
+      "Menyajikan informasi acara secara terstruktur dan menarik",
+      "Mempermudah komunikasi antara panitia dan peserta",
+    ],
+    images: [
+      "/project/biosfest_home1.webp",
+      "/project/biosfest_home2.webp",
+      "/project/biosfest_home3.webp",
+      "/project/biosfest_home4.webp",
+      "/project/biosfest_daftar1.webp",
+      "/project/biosfest_daftar2.webp",
+    ],
+    image: "/project/biosfest_home1.webp",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
+    liveLink: "https://biosfest.vercel.app",
+    githubLink: "https://github.com/KwikAndreas/biosfest",
+    featured: false,
+    stats: {
+      users: "250+",
+      completionDate: "November 2025",
+      rating: 4.9,
+    },
+    status: "Live",
+  },
+  // {
+  //   id: "daftarbios",
+  //   title: "Daftar BIOS",
+  //   category: "Web Development",
+  //   client: "Organization Project",
+  //   duration: "5 days",
+  //   description:
+  //     "Platform pendaftaran online untuk anggota dan sesi kelas Himpunan Mahasiswa Bioinformatika (HIMA BIOS).",
+  //   fullDescription:
+  //     "Platform pendaftaran online yang memudahkan calon anggota HIMA BIOS untuk mendaftar sebagai anggota serta mengikuti sesi kelas dan workshop yang diselenggarakan oleh organisasi.",
+  //   background:
+  //     "HIMA BIOS membutuhkan sistem pendaftaran digital untuk mengelola anggota dan peserta kelas secara efisien. Sistem manual sebelumnya menyebabkan kesulitan dalam tracking pendaftaran dan komunikasi dengan calon anggota.",
+  //   objectives: [
+  //     "Meningkatkan efisiensi proses pendaftaran anggota",
+  //     "Mempermudah calon anggota dalam mengakses informasi kelas",
+  //     "Implementasi sistem notifikasi otomatis untuk pendaftaran",
+  //   ],
+  //   images: [
+  //     "/project/himabios.webp",
+  //     "/project/himabios_learn.webp",
+  //     "/project/himabios_about.webp",
+  //     "/project/himabios_announcement.webp",
+  //   ],
+  //   image: "/project/daftarbios.webp",
+  //   technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
+  //   liveLink: "https://daftarbios.vercel.app",
+  //   githubLink: "https://github.com/KwikAndreas/daftarbios",
+  //   featured: false,
+  //   stats: {
+  //     users: "120+",
+  //     rating: 5.0,
+  //     completionDate: "September 2025",
+  //   },
+  //   status: "Live",
+  // },
+  {
     id: "biosmerch",
     title: "BIOS Merchandise",
     category: "Web Development",
