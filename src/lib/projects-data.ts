@@ -1,6 +1,36 @@
 // lib/projects-data.ts
 export const projects = [
   {
+    id: "pingx",
+    title: "PingX",
+    category: "Node Package Manager",
+    duration: "1 Weeks",
+    description:
+      "Node.js package untuk monitoring latency server dan koneksi jaringan dengan tampilan yang sudah dioptimalkan.",
+    fullDescription:
+      "Node.js package untuk monitoring latency server dan koneksi jaringan dengan tampilan yang sudah dioptimalkan.",
+    background:
+      "PingX adalah paket Node.js open source yang dirancang untuk memantau latency server dan koneksi jaringan secara real-time. Paket ini menyediakan antarmuka yang mudah digunakan dan visualisasi data yang informatif untuk membantu pengembang mengidentifikasi dan mengatasi masalah jaringan dengan cepat.",
+    objectives: [
+      "Menyediakan alat monitoring latency yang mudah digunakan",
+      "Memberikan visualisasi data yang informatif",
+    ],
+    images: [
+      "/project/PingX.webp",
+    ],
+    image: "/project/PingX.webp",
+    technologies: ["Node.js", "Javascript"],
+    liveLink: "https://www.npmjs.com/package/@xavorus/pingx",
+    githubLink: "https://github.com/KwikAndreas/pingx",
+    featured: true,
+    stats: {
+      users: "415+",
+      completionDate: "November 2025",
+      rating: 4.9,
+    },
+    status: "Live",
+  },
+  {
     id: "biosfest",
     title: "BIOS Festival",
     category: "Web Development",
