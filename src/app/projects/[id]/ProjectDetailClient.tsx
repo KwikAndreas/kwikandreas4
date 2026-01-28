@@ -18,7 +18,7 @@ interface Project {
   readonly id: string;
   readonly title: string;
   readonly category: string;
-  readonly client: string;
+  readonly client?: string;
   readonly duration: string;
   readonly description: string;
   readonly fullDescription: string;
@@ -111,8 +111,8 @@ export default function ProjectDetailClient({
                 project.status === "Live"
                   ? "bg-green-500/20 text-green-600 dark:text-green-400 border-green-500/30"
                   : project.status === "Abandoned"
-                  ? "bg-red-500/20 text-red-600 dark:text-red-400 border-red-500/30"
-                  : ""
+                    ? "bg-red-500/20 text-red-600 dark:text-red-400 border-red-500/30"
+                    : ""
               }`}
             >
               {project.status}
