@@ -3,16 +3,21 @@
 export const personStructuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Kwik Andreas Jonathan",
+  name: "Kwik Andreas",
+  givenName: "Andreas",
+  familyName: "Kwik",
+  additionalName: "Jonathan",
   alternateName: [
+    "Kwik Andreas Jonathan",
     "KwikAndreas",
-    "Kwik Andreas",
     "Andreas Jonathan Kwik",
     "Andreas Kwik",
     "Jonathan Kwik Andreas",
     "kwikandreas",
     "kwik-andreas",
     "kwik_andreas",
+    "Kwik Andreas Indonesia",
+    "Kwik Andreas Jakarta",
   ],
   url: "https://kwikandreas.vercel.app",
   image: "https://kwikandreas.vercel.app/images/bitgrow.png",
@@ -22,7 +27,7 @@ export const personStructuredData = {
     "https://instagram.com/kwikandreas",
     "https://twitter.com/kwikandreas",
   ],
-  jobTitle: "Full Stack Developer",
+  jobTitle: "Full Stack Developer & Game Developer",
   worksFor: {
     "@type": "Organization",
     name: "Freelance",
@@ -44,11 +49,16 @@ export const personStructuredData = {
     "Node.js",
   ],
   description:
-    "Kwik Andreas Jonathan (KwikAndreas) - Experienced Full Stack Developer specializing in web development, game development, and mobile applications. Expert in React, Next.js, Unity, and modern web technologies. Based in Indonesia.",
+    "Kwik Andreas (Kwik Andreas Jonathan) is an expert Full Stack Developer and Game Developer from Indonesia. Specializing in React, Next.js, Unity, web development, game development, and mobile applications. Kwik Andreas has extensive experience in modern web technologies and creating innovative digital solutions.",
   nationality: "Indonesian",
   homeLocation: {
     "@type": "Place",
-    name: "Indonesia",
+    name: "Jakarta, Indonesia",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Jakarta",
+      addressCountry: "ID",
+    },
   },
   alumniOf: [
     {
@@ -61,20 +71,25 @@ export const personStructuredData = {
 export const websiteStructuredData = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Kwik Andreas Jonathan Portfolio",
+  name: "Kwik Andreas Portfolio",
   alternateName: [
+    "Kwik Andreas Jonathan Portfolio",
     "KwikAndreas Portfolio",
-    "Kwik Andreas Portfolio",
+    "Kwik Andreas Developer Portfolio",
     "Andreas Jonathan Kwik Portfolio",
-    "KwikAndreas Developer Portfolio",
+    "Portfolio Kwik Andreas",
   ],
   url: "https://kwikandreas.vercel.app",
   description:
-    "Professional portfolio website of Kwik Andreas Jonathan (KwikAndreas) - Full Stack Developer specializing in web development, game development, and mobile applications.",
+    "Professional portfolio website of Kwik Andreas - Expert Full Stack Developer and Game Developer from Indonesia. Showcasing web development, game development, and mobile application projects by Kwik Andreas.",
   author: {
     "@type": "Person",
-    name: "Kwik Andreas Jonathan",
-    alternateName: ["KwikAndreas", "Kwik Andreas", "Andreas Jonathan Kwik"],
+    name: "Kwik Andreas",
+    alternateName: [
+      "Kwik Andreas Jonathan",
+      "KwikAndreas",
+      "Andreas Jonathan Kwik",
+    ],
   },
   inLanguage: ["en", "id"],
   potentialAction: {
@@ -84,26 +99,35 @@ export const websiteStructuredData = {
   },
   mainEntity: {
     "@type": "Person",
-    name: "Kwik Andreas Jonathan",
-    alternateName: ["KwikAndreas", "Kwik Andreas", "Andreas Jonathan Kwik"],
+    name: "Kwik Andreas",
+    alternateName: [
+      "Kwik Andreas Jonathan",
+      "KwikAndreas",
+      "Andreas Jonathan Kwik",
+    ],
   },
 };
 
 export const professionalServiceStructuredData = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "Kwik Andreas Jonathan - Web & Game Development Services",
+  name: "Kwik Andreas - Web & Game Development Services",
   alternateName: [
-    "KwikAndreas Development Services",
     "Kwik Andreas Development Services",
+    "KwikAndreas Development Services",
+    "Kwik Andreas Jonathan Development Services",
   ],
   url: "https://kwikandreas.vercel.app",
   description:
-    "Professional web development, game development, and mobile app development services by Kwik Andreas Jonathan (KwikAndreas). Specializing in React, Next.js, Unity, and modern web technologies.",
+    "Professional web development, game development, and mobile app development services by Kwik Andreas. Expert in React, Next.js, Unity, and modern web technologies. Kwik Andreas provides high-quality development solutions for businesses and startups.",
   provider: {
     "@type": "Person",
-    name: "Kwik Andreas Jonathan",
-    alternateName: ["KwikAndreas", "Kwik Andreas", "Andreas Jonathan Kwik"],
+    name: "Kwik Andreas",
+    alternateName: [
+      "Kwik Andreas Jonathan",
+      "KwikAndreas",
+      "Andreas Jonathan Kwik",
+    ],
   },
   areaServed: [
     {
@@ -132,20 +156,21 @@ export const professionalServiceStructuredData = {
 export const organizationStructuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "KwikAndreas",
+  name: "Kwik Andreas",
   alternateName: [
-    "Kwik Andreas",
+    "KwikAndreas",
     "Kwik Andreas Jonathan",
     "Andreas Jonathan Kwik",
+    "Kwik Andreas Portfolio",
   ],
   url: "https://kwikandreas.vercel.app",
   logo: "https://kwikandreas.vercel.app/bitgrow.svg",
   description:
-    "Professional software development services by Kwik Andreas Jonathan",
+    "Professional software development services by Kwik Andreas - Expert Full Stack Developer and Game Developer",
   founder: {
     "@type": "Person",
-    name: "Kwik Andreas Jonathan",
-    alternateName: ["KwikAndreas", "Kwik Andreas"],
+    name: "Kwik Andreas",
+    alternateName: ["Kwik Andreas Jonathan", "KwikAndreas"],
   },
   sameAs: [
     "https://github.com/kwikandreas",
@@ -154,15 +179,20 @@ export const organizationStructuredData = {
   ],
 };
 
-// Keywords untuk meta tags
+// Keywords untuk meta tags - OPTIMIZED untuk "Kwik Andreas"
 export const seoKeywords = [
-  // Variasi nama utama
-  "Kwik",
-  "Andreas",
-  "Jonathan",
+  // PRIMARY KEYWORDS - Variasi nama utama (prioritas tinggi)
   "Kwik Andreas",
-  "Andreas Kwik",
+  "kwik andreas",
+  "KWIK ANDREAS",
+  "Kwik Andreas portfolio",
+  "Kwik Andreas developer",
+  "Kwik Andreas Indonesia",
+  "Kwik Andreas Jakarta",
+
+  // Secondary name variations
   "Kwik Andreas Jonathan",
+  "Andreas Kwik",
   "Andreas Jonathan Kwik",
   "Jonathan Kwik Andreas",
   "KwikAndreas",
@@ -173,16 +203,21 @@ export const seoKeywords = [
   "Andreas Jonathan",
   "Kwik Jonathan",
 
-  // Developer variations
-  "Kwik Andreas developer",
+  // Developer variations dengan "Kwik Andreas"
+  "Kwik Andreas full stack developer",
+  "Kwik Andreas web developer",
+  "Kwik Andreas game developer",
+  "Kwik Andreas React developer",
+  "Kwik Andreas Next.js developer",
+  "portfolio Kwik Andreas",
+  "website Kwik Andreas",
   "KwikAndreas developer",
   "Andreas Jonathan developer",
-  "kwikandreas portfolio",
-  "Kwik Andreas portfolio",
-  "KwikAndreas portfolio",
-  "Andreas developer Indonesia",
   "Kwik Andreas developer Indonesia",
+  "Kwik Andreas developer Jakarta",
   "KwikAndreas Indonesia",
+  "Kwik Andreas freelance",
+  "Kwik Andreas programmer",
 
   // Professional terms
   "full stack developer",

@@ -1,0 +1,45 @@
+=== Kwik Andreas - Full Stack Developer Portfolio ===
+
+Name: Kwik Andreas
+Full Name: Kwik Andreas Jonathan
+Also Known As: KwikAndreas, Andreas Jonathan Kwik
+
+Professional Title: Full Stack Developer & Game Developer
+
+Location: Jakarta, Indonesia
+
+Expertise:
+- Full Stack Web Development
+- Game Development (Unity)
+- Mobile Application Development
+- React & Next.js Development
+- JavaScript & TypeScript
+- Frontend & Backend Development
+
+About Kwik Andreas:
+Kwik Andreas is a passionate and experienced Full Stack Developer from Indonesia,
+specializing in creating innovative digital solutions using modern web technologies.
+With expertise in React, Next.js, Unity, and various programming languages,
+Kwik Andreas transforms ideas into reality through clean code and exceptional
+user experiences.
+
+Portfolio Website: https://kwikandreas.vercel.app
+
+Technologies:
+React, Next.js, Unity, JavaScript, TypeScript, Node.js, Python, C#,
+Tailwind CSS, Framer Motion, PostgreSQL, MongoDB, Firebase
+
+Services:
+- Web Application Development
+- Game Development
+- Mobile App Development
+- E-commerce Solutions
+- Custom Software Development
+- UI/UX Implementation
+
+Contact Kwik Andreas for professional development services.
+
+Keywords: Kwik Andreas, kwik andreas, Kwik Andreas Jonathan, KwikAndreas,
+full stack developer Indonesia, web developer Jakarta, game developer Indonesia,
+React developer, Next.js expert, Unity developer, Indonesian developer,
+portfolio Kwik Andreas

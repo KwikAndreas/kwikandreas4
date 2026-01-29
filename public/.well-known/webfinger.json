@@ -1,0 +1,46 @@
+{
+  "subject": "https://kwikandreas.vercel.app",
+  "aliases": [
+    "https://github.com/kwikandreas",
+    "https://linkedin.com/in/kwik-jonathan",
+    "https://twitter.com/kwikandreas",
+    "https://instagram.com/kwikandreas"
+  ],
+  "properties": {
+    "https://schema.org/name": "Kwik Andreas",
+    "https://schema.org/givenName": "Andreas",
+    "https://schema.org/familyName": "Kwik",
+    "https://schema.org/additionalName": "Jonathan",
+    "https://schema.org/alternateName": [
+      "Kwik Andreas Jonathan",
+      "KwikAndreas",
+      "Andreas Jonathan Kwik"
+    ],
+    "https://schema.org/jobTitle": "Full Stack Developer",
+    "https://schema.org/description": "Kwik Andreas is an expert Full Stack Developer and Game Developer from Indonesia",
+    "https://schema.org/url": "https://kwikandreas.vercel.app",
+    "https://schema.org/image": "https://kwikandreas.vercel.app/images/bitgrow.png"
+  },
+  "links": [
+    {
+      "rel": "https://webfinger.net/rel/profile-page",
+      "href": "https://kwikandreas.vercel.app",
+      "type": "text/html"
+    },
+    {
+      "rel": "https://webfinger.net/rel/avatar",
+      "href": "https://kwikandreas.vercel.app/images/bitgrow.png",
+      "type": "image/png"
+    },
+    {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "href": "https://github.com/kwikandreas",
+      "type": "text/html"
+    },
+    {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "href": "https://linkedin.com/in/kwik-jonathan",
+      "type": "text/html"
+    }
+  ]
+}

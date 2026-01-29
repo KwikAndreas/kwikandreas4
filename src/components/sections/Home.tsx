@@ -28,7 +28,7 @@ function TypingAnimation({ words }: { words: string[] }) {
           }
         }
       },
-      isDeleting ? 50 : 100
+      isDeleting ? 50 : 100,
     );
 
     return () => clearTimeout(timeout);
@@ -163,26 +163,35 @@ export function HomeSection() {
           variants={FADE_DOWN_ANIMATION_VARIANTS}
           className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-12"
         >
-          Passionate about creating innovative digital solutions with modern
-          technologies. I transform ideas into reality through clean code and
-          exceptional user experiences.
+          Kwik Andreas is a passionate Full Stack Developer creating innovative
+          digital solutions with modern technologies. Transforming ideas into
+          reality through clean code and exceptional user experiences.
         </motion.p>
 
         {/* Hidden text for SEO - contains variations of the name */}
-        <div className="sr-only">
-          <h2>Kwik Andreas Jonathan Portfolio</h2>
+        <div className="sr-only" aria-hidden="true">
+          <h2>Kwik Andreas - Professional Developer Portfolio</h2>
+          <h3>Kwik Andreas Jonathan Full Stack Developer</h3>
           <p>
-            KwikAndreas developer, Kwik Andreas full stack developer, Andreas
-            Jonathan Kwik game developer
+            Kwik Andreas, professional full stack developer and game developer
+            from Indonesia. Kwik Andreas specializes in React, Next.js, Unity,
+            and modern web technologies.
           </p>
           <p>
-            Portfolio website oleh Kwik Andreas, dikenal juga sebagai
-            KwikAndreas
+            Portfolio website by Kwik Andreas (also known as Kwik Andreas
+            Jonathan or KwikAndreas). Kwik Andreas Indonesia developer portfolio
+            showcasing web development, game development, and mobile application
+            projects.
           </p>
           <p>
-            Kwik Andreas Jonathan - Web Developer Indonesia, Game Developer,
-            Mobile Developer
+            Contact Kwik Andreas for web development services, game development,
+            and mobile app development. Kwik Andreas - Expert developer based in
+            Jakarta, Indonesia.
           </p>
+          <span>
+            kwik andreas, kwik andreas jonathan, kwik andreas developer, kwik
+            andreas portfolio, kwik andreas indonesia
+          </span>
         </div>
 
         <motion.div

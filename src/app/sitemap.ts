@@ -1,27 +1,46 @@
-// app/sitemap.ts
+// app/sitemap.ts - Enhanced for SEO
 import { MetadataRoute } from "next";
 import { projects } from "@/lib/projects-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://kwikandreas.vercel.app";
+  const currentDate = new Date();
 
-  // Static pages
+  // Static pages with enhanced priority
   const staticPages = [
     {
       url: baseUrl,
-      lastModified: new Date(),
+      lastModified: currentDate,
+      changeFrequency: "daily" as const,
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/#about`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/#projects`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/#contact`,
+      lastModified: currentDate,
       changeFrequency: "monthly" as const,
-      priority: 1,
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date(),
+      lastModified: currentDate,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/tools`,
-      lastModified: new Date(),
+      lastModified: currentDate,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
@@ -31,9 +50,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const projectPages = Array.isArray(projects)
     ? projects.map((project) => ({
         url: `${baseUrl}/projects/${project.id}`,
-        lastModified: new Date(),
+        lastModified: currentDate,
         changeFrequency: "monthly" as const,
-        priority: 0.6,
+        priority: 0.7,
       }))
     : [];
 

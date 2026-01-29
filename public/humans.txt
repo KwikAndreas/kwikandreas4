@@ -1,0 +1,39 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Developer: Kwik Andreas
+    Full Name: Kwik Andreas Jonathan
+    Also known as: KwikAndreas
+    Contact: kwikandreas [at] gmail.com
+    Location: Jakarta, Indonesia
+    Twitter: @kwikandreas
+    GitHub: github.com/kwikandreas
+
+# THANKS
+
+    Kwik Andreas thanks everyone who has supported this portfolio
+
+# TECHNOLOGY COLOPHON
+
+    Language: TypeScript, JavaScript
+    Framework: Next.js 16, React 19
+    Styling: Tailwind CSS
+    Animation: Framer Motion
+    Deployment: Vercel
+    Version Control: Git
+
+# SITE
+
+    Last update: 2026/01/29
+    Standards: HTML5, CSS3, ES6+
+    Components: React Components
+    Software: VS Code, GitHub Copilot
+    
+# KEYWORDS
+
+    Kwik Andreas, kwik andreas, Kwik Andreas Jonathan, 
+    full stack developer, game developer, web developer,
+    React developer, Next.js developer, Unity developer,
+    Indonesia developer, Jakarta developer

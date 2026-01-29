@@ -1,14 +1,28 @@
 User-agent: *
 Allow: /
 
-# High priority pages
+# High priority pages - Kwik Andreas Portfolio
 Allow: /
 Allow: /projects/*
 Allow: /blog
 Allow: /tools
 
+# Prioritize important content
+Disallow: /private/
+Disallow: /admin/
+Disallow: /api/
+
 # Sitemaps
 Sitemap: https://kwikandreas.vercel.app/sitemap.xml
 
 # Crawl delay
-Crawl-delay: 1
+Crawl-delay: 0.5
+
+# Additional directives for better indexing
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0.5
