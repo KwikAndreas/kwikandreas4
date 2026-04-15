@@ -134,14 +134,14 @@ export default function ProjectDetailClient({
           </div>
 
           {project.images && project.images.length > 1 && (
-            <div className="flex gap-4 justify-center overflow-x-auto pb-2">
+            <div className="flex gap-3 md:gap-4 justify-start md:justify-center overflow-x-auto pb-2 px-1 md:px-0 snap-x snap-mandatory">
               {project.images.map((image, index) => (
                 <motion.button
                   key={index}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setSelectedImageIndex(index)}
-                  className={`relative w-24 h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
+                  className={`relative shrink-0 w-32 h-20 md:w-24 md:h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 snap-start ${
                     selectedImageIndex === index
                       ? "border-primary shadow-lg"
                       : "border-border/50 hover:border-primary/50"

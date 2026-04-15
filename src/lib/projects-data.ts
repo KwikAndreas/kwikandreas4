@@ -1,5 +1,42 @@
+import { title } from "process";
+
 // lib/projects-data.ts
 export const projects = [
+  {
+    id: "Heroes",
+    title: "Heroes",
+    category: "Game Development",
+    duration: "2 Weeks",
+    description:
+      "Game RPG Medival dengan Third Person View, fitur crafting, dan sistem quest yang mendalam.",
+    fullDescription:
+      "Game RPG dengan setting medieval yang menawarkan pengalaman bermain yang imersif. Fitur utama termasuk mekanik crafting yang kompleks, sistem quest yang mendalam, dan dunia terbuka yang luas untuk dijelajahi.",
+    background:
+      "Heroes adalah proyek game RPG yang dikembangkan untuk memberikan pengalaman bermain yang mendalam dan imersif. Game ini dirancang dengan fokus pada mekanik crafting yang kompleks, sistem quest yang kaya, dan dunia terbuka yang luas untuk dijelajahi oleh para pemain.",
+    objectives: [
+      "Menyediakan pengalaman RPG yang imersif dengan mekanik crafting yang kompleks",
+      "Membangun sistem quest yang mendalam untuk meningkatkan engagement pemain",
+    ],
+    images: ["/project/Heroes.webp"],
+    image: "/project/Heroes.webp",
+    technologies: [
+      "Unity",
+      "C#",
+      "Blender",
+      "Adobe Illustrator",
+      "Adobe After Effects",
+      "Adobe Premiere",
+    ],
+    liveLink: "",
+    githubLink: undefined,
+    featured: true,
+    stats: {
+      users: "10+",
+      completionDate: "April 2026",
+      rating: 4.7,
+    },
+    status: "Live",
+  },
   {
     id: "pingx",
     title: "PingX",
@@ -20,11 +57,45 @@ export const projects = [
     technologies: ["Node.js", "Javascript"],
     liveLink: "https://www.npmjs.com/package/@xavorus/pingx",
     githubLink: "https://github.com/KwikAndreas/pingx",
-    featured: true,
+    featured: false,
     stats: {
       users: "415+",
       completionDate: "November 2025",
       rating: 4.9,
+    },
+    status: "Live",
+  },
+  {
+    id: "kelasbios",
+    title: "Kelas BIOS",
+    category: "Web Development",
+    client: "Organization Project",
+    duration: "2 days",
+    description:
+      "Platform pendaftaran online untuk anggota dan sesi kelas Himpunan Mahasiswa Informatika (HIMA BIOS).",
+    fullDescription:
+      "Platform pendaftaran online yang memudahkan calon anggota HIMA BIOS untuk mendaftar sebagai anggota serta mengikuti sesi kelas dan workshop yang diselenggarakan oleh organisasi.",
+    background:
+      "HIMA BIOS membutuhkan sistem pendaftaran digital untuk mengelola anggota dan peserta kelas secara efisien. Sistem manual sebelumnya menyebabkan kesulitan dalam tracking pendaftaran dan komunikasi dengan calon anggota.",
+    objectives: [
+      "Meningkatkan efisiensi proses pendaftaran anggota",
+      "Mempermudah calon anggota dalam mengakses informasi kelas",
+      "Implementasi sistem notifikasi otomatis untuk pendaftaran",
+    ],
+    images: [
+      "/project/kelasbios_home.webp",
+      "/project/kelasbios_dashboard.webp",
+      "/project/kelasbios_admin.webp",
+    ],
+    image: "/project/kelasbios_home.webp",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
+    liveLink: "https://kelasbios.vercel.app",
+    githubLink: "https://github.com/KwikAndreas/kelasbios",
+    featured: false,
+    stats: {
+      users: "40+",
+      rating: 4.8,
+      completionDate: "Maret 2026",
     },
     status: "Live",
   },
@@ -72,7 +143,13 @@ export const projects = [
       "/project/biosfest/biosfest.vercel.app_lomba_mahasiswa_game_footer.webp",
     ],
     image: "/project/biosfest/biosfest.vercel.app_landing_page.webp",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Vercel"],
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "Vercel",
+    ],
     liveLink: "https://biosfest.vercel.app",
     githubLink: "https://github.com/KwikAndreas/biosfest",
     featured: false,
@@ -81,43 +158,9 @@ export const projects = [
       completionDate: "Januari 2025",
       rating: 4.8,
     },
-    status: "Live",
+    status: "Abandoned",
   },
-  // {
-  //   id: "daftarbios",
-  //   title: "Daftar BIOS",
-  //   category: "Web Development",
-  //   client: "Organization Project",
-  //   duration: "5 days",
-  //   description:
-  //     "Platform pendaftaran online untuk anggota dan sesi kelas Himpunan Mahasiswa Bioinformatika (HIMA BIOS).",
-  //   fullDescription:
-  //     "Platform pendaftaran online yang memudahkan calon anggota HIMA BIOS untuk mendaftar sebagai anggota serta mengikuti sesi kelas dan workshop yang diselenggarakan oleh organisasi.",
-  //   background:
-  //     "HIMA BIOS membutuhkan sistem pendaftaran digital untuk mengelola anggota dan peserta kelas secara efisien. Sistem manual sebelumnya menyebabkan kesulitan dalam tracking pendaftaran dan komunikasi dengan calon anggota.",
-  //   objectives: [
-  //     "Meningkatkan efisiensi proses pendaftaran anggota",
-  //     "Mempermudah calon anggota dalam mengakses informasi kelas",
-  //     "Implementasi sistem notifikasi otomatis untuk pendaftaran",
-  //   ],
-  //   images: [
-  //     "/project/himabios.webp",
-  //     "/project/himabios_learn.webp",
-  //     "/project/himabios_about.webp",
-  //     "/project/himabios_announcement.webp",
-  //   ],
-  //   image: "/project/daftarbios.webp",
-  //   technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
-  //   liveLink: "https://daftarbios.vercel.app",
-  //   githubLink: "https://github.com/KwikAndreas/daftarbios",
-  //   featured: false,
-  //   stats: {
-  //     users: "120+",
-  //     rating: 5.0,
-  //     completionDate: "September 2025",
-  //   },
-  //   status: "Live",
-  // },
+
   {
     id: "biosmerch",
     title: "BIOS Merchandise",
@@ -145,9 +188,9 @@ export const projects = [
     stats: {
       users: "120+",
       completionDate: "September 2025",
-      rating: 4.5,
+      rating: 4.3,
     },
-    status: "Live",
+    status: "Abandoned",
   },
   {
     id: "himabios",
@@ -214,92 +257,26 @@ export const projects = [
       "/project/gkicinda_kalender.webp",
       "/project/gkicinda_download.webp",
     ],
-    image: "/project/gkicinda_home.webp",
+    image: "/project/gkicinda.webp",
     technologies: [
       "Next.js",
       "Vite",
       "TypeScript",
       "PostgreSQL",
+      "Supabase",
       "Tailwind CSS",
     ],
     liveLink: "https://gkicinda.id",
     githubLink: "https://github.com/KwikAndreas/GKI-CINDA",
     featured: true,
     stats: {
-      users: "700+",
+      users: "900+",
       rating: 5.0,
       completionDate: "August 2025",
     },
     status: "Live",
   },
-  {
-    id: "car-rush",
-    title: "Car Rush",
-    category: "Game Development",
-    client: "Personal Project",
-    duration: "2 months",
-    description:
-      "Game mobile endless runner dengan Unity 3D. Fitur multiplayer real-time, sistem upgrade kendaraan, dan leaderboard global.",
-    fullDescription:
-      "Game racing mobile dengan mekanik endless runner, sistem monetisasi in-app purchase, analytics terintegrasi, dan cloud save functionality.",
-    background:
-      "Proyek personal untuk mengeksplorasi game development dengan Unity dan mempelajari implementasi sistem multiplayer real-time dalam mobile gaming.",
-    objectives: [
-      "Mengembangkan game mobile yang engaging",
-      "Implementasi sistem multiplayer real-time",
-      "Integrasi monetisasi in-app purchase",
-      "Optimasi performa untuk berbagai device mobile",
-    ],
-    images: ["/project/carrush.webp"],
-    image: "/project/carrush.webp",
-    technologies: ["Unity", "C#", "Blender", "Adobe Illustrator"],
-    liveLink: "https://bit-grow.itch.io/carrush",
-    githubLink: undefined,
-    featured: false,
-    stats: {
-      users: undefined,
-      rating: undefined,
-      completionDate: "June 2023",
-    },
-    status: "Abandoned",
-  },
-  {
-    id: "angke5",
-    title: "Angke5",
-    category: "Web Development",
-    client: "Restaurant Business",
-    duration: "4 months",
-    description:
-      "Platform e-commerce untuk penjualan buah segar dengan sistem inventory real-time, tracking pengiriman, dan program loyalitas pelanggan.",
-    fullDescription:
-      "E-commerce platform dengan fitur advanced seperti AI recommendation engine, real-time inventory management, automated logistics, dan customer loyalty program.",
-    background:
-      "Bisnis restoran membutuhkan sistem reservasi dan pemesanan online yang terintegrasi dengan sistem inventory dan customer management.",
-    objectives: [
-      "Digitalisasi sistem reservasi restoran",
-      "Implementasi sistem inventory real-time",
-      "Pengembangan program loyalitas pelanggan",
-      "Optimasi operasional restoran",
-    ],
-    images: [
-      "/project/angke5.webp",
-      "/project/angke5_menu.webp",
-      "/project/angke5_about.webp",
-      "/project/angke5_contact.webp",
-      "/project/angke5_rooms.webp",
-    ],
-    image: "/project/angke5.webp",
-    liveLink: "https://angke5.web.app/",
-    githubLink: undefined,
-    technologies: ["Flutter", "Firebase"],
-    featured: true,
-    stats: {
-      users: "200+",
-      rating: 4.8,
-      completionDate: "May 2025",
-    },
-    status: "Live",
-  },
+
   {
     id: "waste-sorter",
     title: "Waste Sorter",
@@ -338,5 +315,36 @@ export const projects = [
       completionDate: "Nov 2024",
     },
     status: "Live",
+  },
+  {
+    id: "car-rush",
+    title: "Car Rush",
+    category: "Game Development",
+    client: "Personal Project",
+    duration: "2 months",
+    description:
+      "Game mobile endless runner dengan Unity 3D. Fitur multiplayer real-time, sistem upgrade kendaraan, dan leaderboard global.",
+    fullDescription:
+      "Game racing mobile dengan mekanik endless runner, sistem monetisasi in-app purchase, analytics terintegrasi, dan cloud save functionality.",
+    background:
+      "Proyek personal untuk mengeksplorasi game development dengan Unity dan mempelajari implementasi sistem multiplayer real-time dalam mobile gaming.",
+    objectives: [
+      "Mengembangkan game mobile yang engaging",
+      "Implementasi sistem multiplayer real-time",
+      "Integrasi monetisasi in-app purchase",
+      "Optimasi performa untuk berbagai device mobile",
+    ],
+    images: ["/project/carrush.webp"],
+    image: "/project/carrush.webp",
+    technologies: ["Unity", "C#", "Blender", "Adobe Illustrator"],
+    liveLink: "https://bit-grow.itch.io/carrush",
+    githubLink: undefined,
+    featured: false,
+    stats: {
+      users: undefined,
+      rating: undefined,
+      completionDate: "June 2023",
+    },
+    status: "Abandoned",
   },
 ] as const;

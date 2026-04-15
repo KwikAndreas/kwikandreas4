@@ -2,23 +2,21 @@
 "use client";
 import { motion } from "framer-motion";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { useTheme } from "next-themes";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 const techStack = [
-  // Frontend Development
-  {
-    name: "React",
-    image: "/stack/react.svg",
-    hasImage: true,
-    invertOnDark: false,
-  },
+  // 🚀 Core Frontend (Your Main Expertise)
   {
     name: "Next.js",
     image: "/stack/nextjs.svg",
     hasImage: true,
     invertOnDark: true,
+  },
+  {
+    name: "React",
+    image: "/stack/react.svg",
+    hasImage: true,
+    invertOnDark: false,
   },
   {
     name: "TypeScript",
@@ -33,7 +31,15 @@ const techStack = [
     invertOnDark: false,
   },
 
-  // Backend & Database
+  // 📱 Mobile Development (Highlight kamu)
+  {
+    name: "Dart",
+    image: "/stack/dart.svg",
+    hasImage: true,
+    invertOnDark: false,
+  },
+
+  // 🔙 Backend & Services
   {
     name: "Node.js",
     image: "/stack/nodejs.svg",
@@ -53,41 +59,18 @@ const techStack = [
     invertOnDark: false,
   },
 
-  // Programming Languages
+  // 🎮 Game Development (Strong Differentiator)
   {
-    name: "Python",
-    image: "/stack/python.svg",
+    name: "Unity",
+    image: "/stack/unity6.svg",
     hasImage: true,
-    invertOnDark: false,
+    invertOnDark: true,
   },
   {
     name: "C#",
     image: "/stack/csharp.svg",
     hasImage: true,
     invertOnDark: false,
-  },
-  { name: "C++", image: "/stack/cpp.svg", hasImage: true, invertOnDark: false },
-  {
-    name: "Dart",
-    image: "/stack/dart.svg",
-    hasImage: true,
-    invertOnDark: false,
-  },
-
-  // AI & Machine Learning
-  {
-    name: "TensorFlow",
-    image: "/stack/tensorflow.svg",
-    hasImage: true,
-    invertOnDark: false,
-  },
-
-  // Game Development & 3D
-  {
-    name: "Unity",
-    image: "/stack/unity.svg",
-    hasImage: true,
-    invertOnDark: true,
   },
   {
     name: "Blender",
@@ -96,7 +79,29 @@ const techStack = [
     invertOnDark: false,
   },
 
-  // Design & Creative
+  // 🧠 AI & Data
+  {
+    name: "Python",
+    image: "/stack/python.svg",
+    hasImage: true,
+    invertOnDark: false,
+  },
+  {
+    name: "TensorFlow",
+    image: "/stack/tensorflow.svg",
+    hasImage: true,
+    invertOnDark: false,
+  },
+
+  // 🧩 Additional Languages
+  {
+    name: "C++",
+    image: "/stack/cpp.svg",
+    hasImage: true,
+    invertOnDark: false,
+  },
+
+  // 🎨 Creative Tools (Last, karena bukan core dev)
   {
     name: "Illustrator",
     image: "/stack/illustrator.svg",
@@ -127,28 +132,6 @@ function TechCard({
   tech: (typeof techStack)[0];
   index: number;
 }) {
-  const { theme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const shouldInvert = mounted && tech.invertOnDark && theme === "dark";
-
-  const cardBgClass =
-    mounted && theme === "light"
-      ? "bg-gray-100"
-      : mounted && theme === "dark"
-      ? "bg-black/30"
-      : "bg-grey-100";
-
-  const borderClass =
-    mounted && theme === "dark" ? "border-white/20" : "border-black/10";
-
-  const textClass =
-    mounted && theme === "dark" ? "text-white" : "text-neutral-800";
-
   return (
     <motion.div
       variants={fadeInAnimation}
@@ -159,9 +142,7 @@ function TechCard({
       className="flex justify-center"
     >
       <CardContainer className="inter-var" containerClassName="py-2">
-        <CardBody
-          className={`relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] !w-[180px] !h-[200px] rounded-xl p-6 border flex flex-col items-center justify-center ${cardBgClass} ${borderClass}`}
-        >
+        <CardBody className="relative group/card !w-[180px] !h-[200px] rounded-xl p-6 border flex flex-col items-center justify-center bg-gray-100 border-black/10 dark:bg-black/30 dark:border-white/20 dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1]">
           <CardItem
             translateZ="150"
             rotateX={20}
@@ -172,12 +153,9 @@ function TechCard({
               <Image
                 src={tech.image}
                 alt={tech.name}
-                className="w-full h-full object-contain transition-all duration-300"
+                className={`w-full h-full object-contain transition-all duration-300 ${tech.invertOnDark ? "dark:invert" : ""}`}
                 width={64}
                 height={64}
-                style={{
-                  filter: shouldInvert ? "invert(100%)" : "none",
-                }}
               />
             ) : (
               <div className="w-full h-full bg-gradient-to-br from-violet-500 to-purple-500 rounded-lg flex items-center justify-center text-2xl font-bold text-white">
@@ -187,7 +165,7 @@ function TechCard({
           </CardItem>
           <CardItem
             translateZ="50"
-            className={`text-lg font-bold text-center ${textClass}`}
+            className="text-lg font-bold text-center text-neutral-800 dark:text-white"
           >
             {tech.name}
           </CardItem>
