@@ -113,7 +113,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 0.6,
+      duration: 0.75,
       staggerChildren: 0.1,
     },
   },
@@ -124,13 +124,13 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6 },
+    transition: { duration: 0.75 },
   },
 };
 
 export function AboutSection() {
   const [activeTab, setActiveTab] = useState<"story" | "journey" | "interests">(
-    "story"
+    "story",
   );
 
   return (
@@ -241,8 +241,8 @@ export function AboutSection() {
                     {tab === "journey"
                       ? "Journey"
                       : tab === "interests"
-                      ? "Interests"
-                      : "Story"}
+                        ? "Interests"
+                        : "Story"}
                   </Button>
                 ))}
               </div>
@@ -256,7 +256,7 @@ export function AboutSection() {
                 key={activeTab}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.4 }}
               >
                 {activeTab === "story" && (
                   <div className="space-y-6">
@@ -353,23 +353,23 @@ export function AboutSection() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={containerVariants}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6"
         >
           {achievements.map((achievement, index) => {
             const IconComponent = achievement.icon;
             return (
               <motion.div key={index} variants={itemVariants}>
-                <Card className="p-6 text-center bg-background/50 backdrop-blur-sm border-border/50 hover:border-primary/20 transition-colors duration-300 group">
+                <Card className="p-4 sm:p-6 text-center bg-background/50 backdrop-blur-sm border-border/50 hover:border-primary/20 transition-colors duration-300 group">
                   <motion.div
                     whileHover={{ scale: 1.1 }}
-                    className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4"
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-3 sm:mb-4"
                   >
-                    <IconComponent className="w-6 h-6 text-primary" />
+                    <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                   </motion.div>
-                  <h3 className="text-2xl font-bold mb-2">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2">
                     {achievement.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-xs sm:text-sm text-muted-foreground">
                     {achievement.description}
                   </p>
                 </Card>

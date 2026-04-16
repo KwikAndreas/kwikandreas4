@@ -142,7 +142,7 @@ function TechCard({
       className="flex justify-center"
     >
       <CardContainer className="inter-var" containerClassName="py-2">
-        <CardBody className="relative group/card !w-[180px] !h-[200px] rounded-xl p-6 border flex flex-col items-center justify-center bg-gray-100 border-black/10 dark:bg-black/30 dark:border-white/20 dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1]">
+        <CardBody className="relative group/card !w-[180px] !h-[200px] rounded-xl p-6 border flex flex-col items-center justify-center bg-gray-100 border-black/20 dark:bg-gray-800 dark:border-white/20 dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1]">
           <CardItem
             translateZ="150"
             rotateX={20}
@@ -153,7 +153,7 @@ function TechCard({
               <Image
                 src={tech.image}
                 alt={tech.name}
-                className={`w-full h-full object-contain transition-all duration-300 ${tech.invertOnDark ? "dark:invert" : ""}`}
+                className={`w-full h-full object-contain transition-all duration-300 filter drop-shadow-[0_6px_10px_rgba(0,0,0,0.18)] dark:drop-shadow-[0_6px_12px_rgba(0,0,0,0.45)] ${tech.invertOnDark ? "dark:invert" : ""}`}
                 width={64}
                 height={64}
               />

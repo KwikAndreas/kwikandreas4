@@ -53,7 +53,7 @@ export default function ProjectDetailClient({
     visible: {
       opacity: 1,
       transition: {
-        duration: 0.6,
+        duration: 0.75,
         staggerChildren: 0.1,
       },
     },
@@ -64,7 +64,7 @@ export default function ProjectDetailClient({
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5 },
+      transition: { duration: 0.75 },
     },
   };
 
@@ -77,7 +77,7 @@ export default function ProjectDetailClient({
       <motion.div
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
+        transition={{ duration: 0.75, delay: 0.2 }}
         className="fixed top-8 left-8 z-50"
       >
         <Button
@@ -141,7 +141,7 @@ export default function ProjectDetailClient({
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setSelectedImageIndex(index)}
-                  className={`relative shrink-0 w-32 h-20 md:w-24 md:h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 snap-start ${
+                  className={`relative shrink-0 w-32 h-20 md:w-24 md:h-16 rounded-lg overflow-hidden border-2 transition-all duration-600 snap-start ${
                     selectedImageIndex === index
                       ? "border-primary shadow-lg"
                       : "border-border/50 hover:border-primary/50"
@@ -279,7 +279,7 @@ export default function ProjectDetailClient({
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    transition={{ duration: 0.75, delay: index * 0.1 }}
                     className="flex items-start gap-3 text-muted-foreground"
                   >
                     <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />

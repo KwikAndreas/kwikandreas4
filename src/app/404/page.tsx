@@ -12,14 +12,14 @@ export default function NotFoundPage() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.95, ease: "easeOut" }}
           className="text-center max-w-2xl mx-auto"
         >
           {/* 404 Number */}
           <motion.div
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+            transition={{ duration: 1.15, delay: 0.2, ease: "easeOut" }}
             className="mb-8"
           >
             <h1 className="text-8xl md:text-9xl font-bold bg-gradient-to-r from-primary via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -31,7 +31,7 @@ export default function NotFoundPage() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.95, delay: 0.4 }}
             className="text-3xl md:text-4xl font-bold text-foreground mb-4"
           >
             Halaman Tidak Ditemukan
@@ -41,7 +41,7 @@ export default function NotFoundPage() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.95, delay: 0.6 }}
             className="text-lg text-muted-foreground mb-8 leading-relaxed"
           >
             Maaf, halaman yang Anda cari tidak ada atau telah dipindahkan. Mari
@@ -52,7 +52,7 @@ export default function NotFoundPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.95, delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Link href="/">
@@ -84,7 +84,7 @@ export default function NotFoundPage() {
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 1 }}
+            transition={{ duration: 1.15, delay: 1 }}
             className="mt-12"
           >
             <div className="flex justify-center items-center space-x-2 text-muted-foreground">

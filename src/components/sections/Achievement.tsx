@@ -169,7 +169,7 @@ export default function AchievementCard({
           : { opacity: 0, y: 50, scale: 0.9 }
       }
       transition={{
-        duration: 0.6,
+        duration: 0.75,
         delay: index * 0.1,
         type: "spring",
         damping: 25,
@@ -363,7 +363,7 @@ export function AchievementSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.95 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
@@ -382,7 +382,7 @@ export function AchievementSection() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.95, ease: "easeOut" }}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {AchievementList.map((achievement, index) => (
@@ -398,7 +398,7 @@ export function AchievementSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          transition={{ duration: 0.95, delay: 0.5 }}
           viewport={{ once: true }}
           className="mt-16 text-center"
         >

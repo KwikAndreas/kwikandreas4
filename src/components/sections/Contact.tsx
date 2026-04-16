@@ -19,7 +19,7 @@ export function ContactSection() {
         <motion.form
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.95 }}
           viewport={{ once: true }}
           className="max-w-xl mx-auto space-y-4"
         >

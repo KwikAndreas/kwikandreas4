@@ -52,7 +52,7 @@ export function Timeline({
       x: 0,
       scale: 1,
       transition: {
-        duration: 0.6,
+        duration: 0.75,
         type: "spring",
         damping: 25,
         stiffness: 120,
@@ -69,7 +69,7 @@ export function Timeline({
       scale: 1,
       rotate: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.65,
         type: "spring",
         damping: 15,
         stiffness: 200,
@@ -92,7 +92,7 @@ export function Timeline({
         initial={{ height: 0 }}
         animate={isInView ? { height: "100%" } : { height: 0 }}
         transition={{
-          duration: 1.5,
+          duration: 1.8,
           ease: "easeInOut",
           delay: 0.5,
         }}
@@ -122,7 +122,7 @@ export function Timeline({
               className="flex flex-col gap-2 p-4 rounded-lg bg-background/50 backdrop-blur-sm border border-border/50 hover:border-accent-blue/50 dark:hover:border-accent-blue-dark/50 transition-all duration-300 hover:shadow-md"
               whileHover={{
                 y: -2,
-                transition: { duration: 0.2 },
+                transition: { duration: 0.28 },
               }}
             >
               <motion.h3
@@ -130,7 +130,7 @@ export function Timeline({
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
-                  duration: 0.4,
+                  duration: 0.5,
                   delay: showProgressively ? idx * staggerDelay + 0.4 : 0.4,
                 }}
               >
@@ -142,7 +142,7 @@ export function Timeline({
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{
-                  duration: 0.4,
+                  duration: 0.5,
                   delay: showProgressively ? idx * staggerDelay + 0.5 : 0.5,
                 }}
               >
@@ -155,7 +155,7 @@ export function Timeline({
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
-                  duration: 0.4,
+                  duration: 0.5,
                   delay: showProgressively ? idx * staggerDelay + 0.6 : 0.6,
                 }}
               >
@@ -170,7 +170,7 @@ export function Timeline({
                 initial={{ scaleY: 0, originY: 0 }}
                 animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
                 transition={{
-                  duration: 0.6,
+                  duration: 0.75,
                   delay: showProgressively ? idx * staggerDelay + 0.8 : 0.8,
                 }}
               />

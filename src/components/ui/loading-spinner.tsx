@@ -6,7 +6,7 @@ export function LoadingSpinner() {
       <motion.div
         animate={{ rotate: 360 }}
         transition={{
-          duration: 1,
+          duration: 1.2,
           repeat: Infinity,
           ease: "linear",
         }}

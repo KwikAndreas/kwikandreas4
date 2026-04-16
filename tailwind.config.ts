@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
@@ -18,6 +19,13 @@ const config: Config = {
       screens: {
         "2xl": "1400px",
       },
+    },
+    transitionDuration: {
+      ...defaultTheme.transitionDuration,
+      200: "240ms",
+      300: "360ms",
+      500: "600ms",
+      600: "700ms",
     },
     extend: {
       colors: {
@@ -71,8 +79,8 @@ const config: Config = {
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        "accordion-down": "accordion-down 0.3s ease-out",
+        "accordion-up": "accordion-up 0.3s ease-out",
       },
     },
   },
@@ -82,7 +90,7 @@ const config: Config = {
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
   );
 
   addBase({

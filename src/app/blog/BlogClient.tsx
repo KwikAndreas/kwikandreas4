@@ -50,7 +50,7 @@ export default function BlogClient() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.95 }}
           className="text-center mb-16"
         >
           <Badge variant="outline" className="mb-4">
@@ -73,7 +73,7 @@ export default function BlogClient() {
               key={post.id}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.75, delay: index * 0.1 }}
               className="group bg-card border rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:border-primary/50"
             >
               <div className="flex flex-col md:flex-row gap-6">
@@ -81,7 +81,7 @@ export default function BlogClient() {
                   <Badge variant="secondary" className="text-xs">
                     {post.category}
                   </Badge>
-                  <h2 className="text-2xl font-bold mt-3 mb-3 group-hover:text-primary transition-colors duration-200">
+                  <h2 className="text-2xl font-bold mt-3 mb-3 group-hover:text-primary transition-colors duration-600">
                     {post.title}
                   </h2>
                   <p className="text-muted-foreground leading-relaxed mb-4">
@@ -108,7 +108,7 @@ export default function BlogClient() {
                     ))}
                   </div>
 
-                  <button className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors duration-200 font-medium">
+                  <button className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors duration-600 font-medium">
                     Read More
                     <ArrowRight className="w-3 h-3" />
                   </button>
@@ -122,7 +122,7 @@ export default function BlogClient() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.95, delay: 0.4 }}
           className="text-center py-16 border rounded-xl bg-muted/30"
         >
           <div className="max-w-md mx-auto">

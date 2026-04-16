@@ -102,7 +102,7 @@ function FloatingParticles() {
 export function HomeSection() {
   const FADE_DOWN_ANIMATION_VARIANTS = {
     hidden: { opacity: 0, y: -10 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+    show: { opacity: 1, y: 0, transition: { duration: 0.75 } },
   };
 
   const scrollToSection = (sectionId: string) => {
@@ -209,7 +209,7 @@ export function HomeSection() {
               className="absolute inset-0 bg-gradient-to-r from-primary/0 via-white/20 to-primary/0"
               initial={{ x: "-100%" }}
               whileHover={{ x: "100%" }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.75 }}
             />
           </Button>
 
@@ -264,7 +264,7 @@ export function HomeSection() {
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.2, duration: 0.8, ease: "easeInOut" }}
+        transition={{ delay: 1.2, duration: 0.95, ease: "easeInOut" }}
         className="absolute bottom-10 z-10"
       >
         <button

@@ -16,7 +16,7 @@ export function AnimatedContainer({
   children,
   className = "",
   delay = 0,
-  duration = 0.8,
+  duration = 0.95,
   animationType = "fade",
   direction = "up",
 }: AnimatedContainerProps) {
@@ -174,7 +174,7 @@ export function StaggerContainer({
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.75,
         ease: easingFunction,
       },
     },
@@ -219,7 +219,7 @@ export function HoverAnimation({
       whileHover={{
         scale,
         rotate: rotateOnHover ? 5 : 0,
-        transition: { duration: 0.3 },
+        transition: { duration: 0.4 },
       }}
       whileTap={{ scale: 0.95 }}
     >

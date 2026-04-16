@@ -44,8 +44,8 @@ export function FloatingNav() {
           (item) =>
             item.dropdownItems
               ?.filter((sub) => sub.type === "section")
-              .map((sub) => sub.href) || []
-        )
+              .map((sub) => sub.href) || [],
+        ),
     );
 
   // Always call the hook, but only enable on home page
@@ -123,7 +123,7 @@ export function FloatingNav() {
       <motion.nav
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
+        transition={{ duration: 0.75, ease: "easeInOut" }}
         className="fixed top-5 left-1/2 -translate-x-1/2 z-50 hidden md:block"
       >
         <div className="flex items-center gap-2 p-3 rounded-full border border-accent/30 bg-background/70 dark:bg-background/40 backdrop-blur-xl shadow-2xl">
@@ -138,11 +138,11 @@ export function FloatingNav() {
                   <Button
                     variant={activeSection === item.href ? "default" : "ghost"}
                     size="sm"
-                    className="relative px-4 py-2 font-medium transition-all duration-200 group flex items-center gap-1"
+                    className="relative px-4 py-2 font-medium transition-all duration-600 group flex items-center gap-1"
                   >
                     <span className="relative z-10">{item.name}</span>
                     <ChevronDown
-                      className={`w-3 h-3 transition-transform duration-200 ${
+                      className={`w-3 h-3 transition-transform duration-600 ${
                         activeDropdown === item.name ? "rotate-180" : ""
                       }`}
                     />
@@ -162,29 +162,29 @@ export function FloatingNav() {
                         />
                       )}
                     </AnimatePresence>
-                    <span className="absolute left-0 top-0 w-full h-full rounded-full opacity-0 group-hover:opacity-100 bg-accent/10 dark:bg-accent/20 transition-all duration-200 -z-20" />
+                    <span className="absolute left-0 top-0 w-full h-full rounded-full opacity-0 group-hover:opacity-100 bg-accent/10 dark:bg-accent/20 transition-all duration-600 -z-20" />
                   </Button>
 
                   <AnimatePresence>
                     {activeDropdown === item.name && (
                       <motion.div
-                        initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                        initial={{ opacity: 0, y: -6, scale: 0.98 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: -10, scale: 0.95 }}
-                        transition={{ duration: 0.2, ease: "easeOut" }}
-                        className="absolute top-full left-0 mt-2 py-2 min-w-[140px] rounded-xl border border-accent/30 bg-background/90 dark:bg-background/70 backdrop-blur-xl shadow-2xl z-50"
+                        exit={{ opacity: 0, y: -6, scale: 0.98 }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        className="absolute top-full left-0 mt-2 py-2 min-w-[140px] rounded-xl border border-accent/30 bg-background/90 dark:bg-background/70 backdrop-blur-xl shadow-2xl z-50 will-change-transform will-change-opacity"
                       >
                         {item.dropdownItems?.map((dropdownItem, index) => (
                           <motion.div
                             key={dropdownItem.href}
-                            initial={{ opacity: 0, x: -10 }}
+                            initial={{ opacity: 0, x: -6 }}
                             animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.2, delay: index * 0.05 }}
+                            transition={{ duration: 0.25 }}
                           >
                             <Button
                               variant="ghost"
                               size="sm"
-                              className="w-full justify-start px-3 py-2 font-medium text-sm hover:bg-accent/10 dark:hover:bg-accent/20 transition-all duration-200"
+                              className="w-full justify-start px-3 py-2 font-medium text-sm hover:bg-accent/10 dark:hover:bg-accent/20 transition-all duration-600"
                               onClick={() => handleNavigation(dropdownItem)}
                             >
                               {dropdownItem.name}
@@ -199,7 +199,7 @@ export function FloatingNav() {
                 <Button
                   variant={activeSection === item.href ? "default" : "ghost"}
                   size="sm"
-                  className="relative px-4 py-2 font-medium transition-all duration-200 group"
+                  className="relative px-4 py-2 font-medium transition-all duration-600 group"
                   onClick={() => handleNavigation(item)}
                 >
                   <span className="relative z-10">{item.name}</span>
@@ -219,7 +219,7 @@ export function FloatingNav() {
                       />
                     )}
                   </AnimatePresence>
-                  <span className="absolute left-0 top-0 w-full h-full rounded-full opacity-0 group-hover:opacity-100 bg-accent/10 dark:bg-accent/20 transition-all duration-200 -z-20" />
+                  <span className="absolute left-0 top-0 w-full h-full rounded-full opacity-0 group-hover:opacity-100 bg-accent/10 dark:bg-accent/20 transition-all duration-600 -z-20" />
                 </Button>
               )}
             </div>
@@ -227,7 +227,7 @@ export function FloatingNav() {
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            transition={{ duration: 0.75, delay: 0.3 }}
             className="pl-2"
           >
             <ModeToggle />
@@ -239,7 +239,7 @@ export function FloatingNav() {
       <motion.nav
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
+        transition={{ duration: 0.75, ease: "easeInOut" }}
         className="fixed top-5 left-4 right-4 z-50 md:hidden"
       >
         <div className="flex items-center justify-between p-3 rounded-2xl border border-accent/30 bg-background/80 dark:bg-background/60 backdrop-blur-xl shadow-2xl">
@@ -257,7 +257,7 @@ export function FloatingNav() {
             >
               <motion.div
                 animate={{ rotate: isMobileMenuOpen ? 180 : 0 }}
-                transition={{ duration: 0.2 }}
+                transition={{ duration: 0.75 }}
               >
                 {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
               </motion.div>
@@ -271,7 +271,7 @@ export function FloatingNav() {
               initial={{ opacity: 0, y: -20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -20, scale: 0.95 }}
-              transition={{ duration: 0.2, ease: "easeOut" }}
+              transition={{ duration: 0.75, ease: "easeOut" }}
               className="absolute top-full left-0 right-0 mt-2 p-4 rounded-2xl border border-accent/30 bg-background/90 dark:bg-background/70 backdrop-blur-xl shadow-2xl"
             >
               <div className="flex flex-col gap-2">
@@ -281,7 +281,7 @@ export function FloatingNav() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{
-                      duration: 0.3,
+                      duration: 0.75,
                       delay: index * 0.05,
                       ease: "easeOut",
                     }}
@@ -294,7 +294,7 @@ export function FloatingNav() {
                           className="w-full justify-between relative px-4 py-3 font-medium transition-all duration-200"
                           onClick={() =>
                             setActiveDropdown(
-                              activeDropdown === item.name ? null : item.name
+                              activeDropdown === item.name ? null : item.name,
                             )
                           }
                         >
@@ -311,7 +311,7 @@ export function FloatingNav() {
                               initial={{ opacity: 0, height: 0 }}
                               animate={{ opacity: 1, height: "auto" }}
                               exit={{ opacity: 0, height: 0 }}
-                              transition={{ duration: 0.2 }}
+                              transition={{ duration: 0.28 }}
                               className="pl-4 space-y-1"
                             >
                               {item.dropdownItems?.map(
@@ -321,7 +321,7 @@ export function FloatingNav() {
                                     initial={{ opacity: 0, x: -10 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{
-                                      duration: 0.2,
+                                      duration: 0.28,
                                       delay: dropdownIndex * 0.05,
                                     }}
                                   >
@@ -356,7 +356,7 @@ export function FloatingNav() {
                                       )}
                                     </Button>
                                   </motion.div>
-                                )
+                                ),
                               )}
                             </motion.div>
                           )}
@@ -402,7 +402,7 @@ export function FloatingNav() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.28 }}
             className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden"
             onClick={() => setIsMobileMenuOpen(false)}
           />

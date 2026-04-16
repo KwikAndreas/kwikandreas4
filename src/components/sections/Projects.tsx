@@ -51,7 +51,7 @@ function ProjectCard({
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
+      transition={{ duration: 0.75, delay: index * 0.1 }}
       viewport={{ once: true }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
@@ -90,7 +90,7 @@ function ProjectCard({
             <motion.div
               className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent"
               animate={{ opacity: isHovered ? 0.8 : 0.4 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.4 }}
             />
 
             {/* Status Badge */}
@@ -101,8 +101,8 @@ function ProjectCard({
                   project.status === "Live"
                     ? "bg-green-500/20 text-green-600 dark:text-green-400 border-green-500/30"
                     : project.status === "Abandoned"
-                    ? "bg-red-500/20 text-red-600 dark:text-red-400 border-red-500/30"
-                    : ""
+                      ? "bg-red-500/20 text-red-600 dark:text-red-400 border-red-500/30"
+                      : ""
                 }`}
               >
                 {project.status}
@@ -130,7 +130,7 @@ function ProjectCard({
                 opacity: isHovered ? 1 : 0,
                 scale: isHovered ? 1 : 0.8,
               }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.4 }}
             >
               {project.liveLink && (
                 <Button
@@ -273,7 +273,8 @@ export function ProjectsSection() {
   const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
 
   const filteredProjects = projects.filter(
-    (project) => activeCategory === "All" || project.category === activeCategory
+    (project) =>
+      activeCategory === "All" || project.category === activeCategory,
   );
 
   return (
@@ -291,7 +292,7 @@ export function ProjectsSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.75 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
@@ -310,7 +311,7 @@ export function ProjectsSection() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.75, delay: 0.2 }}
           viewport={{ once: true }}
           className="flex flex-wrap justify-center gap-2 mb-12"
         >
@@ -336,7 +337,7 @@ export function ProjectsSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.75, delay: 0.4 }}
           viewport={{ once: true }}
           className="text-center mt-16"
         >

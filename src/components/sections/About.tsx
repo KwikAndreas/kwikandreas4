@@ -111,7 +111,7 @@ const journey = [
 
 export function AboutSection() {
   const [activeTab, setActiveTab] = useState<"story" | "journey" | "interests">(
-    "story"
+    "story",
   );
   const sectionRef = useRef<HTMLDivElement>(null);
 
@@ -131,7 +131,7 @@ export function AboutSection() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 },
+      transition: { duration: 0.75 },
     },
   };
 
@@ -150,7 +150,7 @@ export function AboutSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.95 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
@@ -231,8 +231,8 @@ export function AboutSection() {
                       {tab === "journey"
                         ? "Journey"
                         : tab === "interests"
-                        ? "Interests"
-                        : "Story"}
+                          ? "Interests"
+                          : "Story"}
                     </Button>
                   ))}
                 </div>
@@ -255,7 +255,7 @@ export function AboutSection() {
                     <motion.div
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5 }}
+                      transition={{ duration: 0.65 }}
                       className="h-full flex flex-col"
                     >
                       <h4 className="text-lg font-semibold mb-4">My Story</h4>
@@ -287,7 +287,7 @@ export function AboutSection() {
                     <motion.div
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5 }}
+                      transition={{ duration: 0.65 }}
                       className="h-full flex flex-col"
                     >
                       <h4 className="text-lg font-semibold mb-4">
@@ -305,7 +305,7 @@ export function AboutSection() {
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{
-                                  duration: 0.6,
+                                  duration: 0.75,
                                   delay: index * 0.1,
                                 }}
                                 className="relative flex items-start gap-4"
@@ -338,20 +338,20 @@ export function AboutSection() {
                     <motion.div
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5 }}
+                      transition={{ duration: 0.65 }}
                       className="h-full flex flex-col"
                     >
                       <h4 className="text-lg font-semibold mb-4">
                         My Interests
                       </h4>
-                      <div className="flex-1 overflow-y-auto pr-2">
-                        <div className="grid grid-cols-2 gap-3 mb-4">
+                      <div className="space-y-4">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                           {interests.map((interest, index) => (
                             <motion.div
                               key={index}
                               initial={{ opacity: 0, scale: 0.8 }}
                               animate={{ opacity: 1, scale: 1 }}
-                              transition={{ duration: 0.3, delay: index * 0.1 }}
+                              transition={{ duration: 0.4, delay: index * 0.1 }}
                               whileHover={{ scale: 1.05 }}
                               className={`p-3 rounded-lg border ${interest.color} cursor-pointer transition-all hover:shadow-md`}
                             >
@@ -364,7 +364,7 @@ export function AboutSection() {
                             </motion.div>
                           ))}
                         </div>
-                        <div className="mt-auto p-3 bg-primary/10 rounded-lg">
+                        <div className="p-3 bg-primary/10 rounded-lg">
                           <p className="text-xs text-muted-foreground italic text-center">
                             &ldquo;The best way to predict the future is to
                             create it. That&apos;s why I&apos;m passionate about
@@ -390,24 +390,24 @@ export function AboutSection() {
             <motion.div variants={itemVariants}>
               <Card className="p-6 bg-background/50 backdrop-blur-sm border-border/50">
                 <h3 className="text-lg font-semibold mb-4">Achievements</h3>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {achievements.map((achievement, index) => (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      transition={{ duration: 0.75, delay: index * 0.1 }}
                       whileHover={{ y: -2, scale: 1.02 }}
                       className="group"
                     >
-                      <Card className="p-3 text-center bg-background/30 backdrop-blur-sm border-border/30 hover:border-primary/50 transition-all duration-300 h-full flex flex-col justify-center">
-                        <div className="w-10 h-10 mx-auto mb-2 bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors">
-                          <achievement.icon className="w-5 h-5 text-primary" />
+                      <Card className="p-3 sm:p-4 text-center bg-background/30 backdrop-blur-sm border-border/30 hover:border-primary/50 transition-all duration-300 h-full flex flex-col justify-center">
+                        <div className="w-9 h-9 sm:w-10 sm:h-10 mx-auto mb-2 bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+                          <achievement.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                         </div>
-                        <h4 className="font-semibold text-sm mb-1">
+                        <h4 className="font-semibold text-sm sm:text-base mb-1">
                           {achievement.title}
                         </h4>
-                        <p className="text-xs text-muted-foreground">
+                        <p className="text-xs sm:text-sm text-muted-foreground">
                           {achievement.description}
                         </p>
                       </Card>

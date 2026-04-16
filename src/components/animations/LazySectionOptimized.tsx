@@ -20,7 +20,7 @@ const sectionVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.75,
       ease: [0.25, 0.25, 0.75, 0.75] as const,
     },
   },
@@ -59,7 +59,7 @@ export function LazySection({
       {
         threshold: 0.1,
         rootMargin: "50px 0px",
-      }
+      },
     );
 
     const element = document.getElementById(sectionId);
