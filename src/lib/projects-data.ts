@@ -247,7 +247,7 @@ export const projects = [
       "Meningkatkan engagement komunitas gereja",
     ],
     images: [
-      "/project/gkicinda_home.webp",
+      "/project/gkicinda.webp",
       "/project/gkicinda_youtube.webp",
       "/project/gkicinda_jadwal.webp",
       "/project/gkicinda_renungan.webp",
