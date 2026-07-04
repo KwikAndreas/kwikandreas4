@@ -15,11 +15,7 @@ export default function Footer() {
             &copy; 2026 Kwik Andreas Jonathan (KwikAndreas). All rights
             reserved.
           </p>
-          {/* Hidden SEO text for footer */}
-          <div className="sr-only">
-            <p>Website by Kwik Andreas Jonathan, also known as KwikAndreas</p>
-            <p>Portfolio developed by Andreas Jonathan Kwik</p>
-          </div>
+
         </div>
       </div>
     </footer>

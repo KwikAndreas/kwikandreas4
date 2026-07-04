@@ -4,8 +4,6 @@ Allow: /
 # High priority pages - Kwik Andreas Portfolio
 Allow: /
 Allow: /projects/*
-Allow: /blog
-Allow: /tools
 
 # Prioritize important content
 Disallow: /private/

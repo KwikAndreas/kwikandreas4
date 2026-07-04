@@ -124,6 +124,7 @@ export function ParticleBackground({
         "absolute inset-0 overflow-hidden pointer-events-none",
         className
       )}
+      aria-hidden="true"
     >
       {particles.map((particle) => (
         <motion.div

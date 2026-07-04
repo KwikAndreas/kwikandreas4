@@ -310,9 +310,9 @@ export const projects = [
     githubLink: undefined,
     featured: false,
     stats: {
-      users: "40+",
+      users: "100+",
       rating: 5.0,
-      completionDate: "Nov 2024",
+      completionDate: "Mei 2025",
     },
     status: "Live",
   },

@@ -8,7 +8,7 @@ import { GradientText } from "@/components/animations/ReactBitsComponents";
 
 function TypingAnimation({ words }: { words: string[] }) {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [currentText, setCurrentText] = useState("");
+  const [currentText, setCurrentText] = useState(words[0] || "");
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
@@ -47,7 +47,7 @@ function TypingAnimation({ words }: { words: string[] }) {
 
 const generateParticles = () => {
   const particles = [];
-  for (let i = 0; i < 60; i++) {
+  for (let i = 0; i < 15; i++) {
     particles.push({
       id: i,
       left: (i * 17) % 100,
@@ -74,7 +74,7 @@ function FloatingParticles() {
   }
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
@@ -121,7 +121,7 @@ export function HomeSection() {
   return (
     <section
       id="home"
-      className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden select-none"
+      className="relative min-h-[100dvh] w-full flex flex-col items-center justify-center overflow-hidden select-none"
     >
       <FloatingParticles />
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
@@ -138,20 +138,17 @@ export function HomeSection() {
             },
           },
         }}
-        className="text-center z-10 max-w-4xl mx-auto px-4"
+        className="text-center z-10 max-w-4xl mx-auto px-4 pb-28 pt-28"
       >
-        <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS} className="mb-4">
+        <div className="mb-4 mt-8 animate-in fade-in slide-in-from-bottom-4 duration-700 fill-mode-both">
           <span className="text-sm md:text-base text-muted-foreground font-medium tracking-wider uppercase">
             👋 Hello, Im
           </span>
-        </motion.div>
+        </div>
 
-        <motion.h1
-          variants={FADE_DOWN_ANIMATION_VARIANTS}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground via-primary to-foreground/70 mb-6"
-        >
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground via-primary to-foreground/70 mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150 fill-mode-both">
           Kwik Andreas
-        </motion.h1>
+        </h1>
 
         <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS} className="mb-8">
           <h2 className="text-xl md:text-3xl font-semibold text-muted-foreground">
@@ -167,32 +164,6 @@ export function HomeSection() {
           digital solutions with modern technologies. Transforming ideas into
           reality through clean code and exceptional user experiences.
         </motion.p>
-
-        {/* Hidden text for SEO - contains variations of the name */}
-        <div className="sr-only" aria-hidden="true">
-          <h2>Kwik Andreas - Professional Developer Portfolio</h2>
-          <h3>Kwik Andreas Jonathan Full Stack Developer</h3>
-          <p>
-            Kwik Andreas, professional full stack developer and game developer
-            from Indonesia. Kwik Andreas specializes in React, Next.js, Unity,
-            and modern web technologies.
-          </p>
-          <p>
-            Portfolio website by Kwik Andreas (also known as Kwik Andreas
-            Jonathan or KwikAndreas). Kwik Andreas Indonesia developer portfolio
-            showcasing web development, game development, and mobile application
-            projects.
-          </p>
-          <p>
-            Contact Kwik Andreas for web development services, game development,
-            and mobile app development. Kwik Andreas - Expert developer based in
-            Jakarta, Indonesia.
-          </p>
-          <span>
-            kwik andreas, kwik andreas jonathan, kwik andreas developer, kwik
-            andreas portfolio, kwik andreas indonesia
-          </span>
-        </div>
 
         <motion.div
           variants={FADE_DOWN_ANIMATION_VARIANTS}
@@ -265,7 +236,7 @@ export function HomeSection() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 0.95, ease: "easeInOut" }}
-        className="absolute bottom-10 z-10"
+        className="absolute bottom-8 md:bottom-10 z-10"
       >
         <button
           onClick={() => scrollToSection("about")}

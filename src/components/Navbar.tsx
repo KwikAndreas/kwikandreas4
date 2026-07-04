@@ -7,20 +7,28 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useRouter, usePathname } from "next/navigation";
 
-const navItems = [
+interface NavItem {
+  name: string;
+  href: string;
+  type: string;
+  dropdownItems?: { name: string; href: string; type: string }[];
+}
+
+const navItems: NavItem[] = [
   { name: "Home", href: "home", type: "section" },
   { name: "About", href: "about", type: "section" },
   { name: "Stack", href: "stack", type: "section" },
-  {
-    name: "Projects",
-    href: "projects",
-    type: "dropdown",
-    dropdownItems: [
-      { name: "Projects", href: "projects", type: "section" },
-      { name: "Blog", href: "/blog", type: "page" },
-      { name: "Tools", href: "/tools", type: "page" },
-    ],
-  },
+  { name: "Projects", href: "projects", type: "section" },
+  // {
+  //   name: "Projects",
+  //   href: "projects",
+  //   type: "dropdown",
+  //   dropdownItems: [
+  //     { name: "Projects", href: "projects", type: "section" },
+  //     { name: "Blog", href: "/blog", type: "page" },
+  //     { name: "Tools", href: "/tools", type: "page" },
+  //   ],
+  // },
   { name: "Achievement", href: "achievement", type: "section" },
   { name: "Contact", href: "contact", type: "section" },
 ];
@@ -254,6 +262,7 @@ export function FloatingNav() {
               size="sm"
               onClick={toggleMobileMenu}
               className="p-2"
+              aria-label="Toggle mobile menu"
             >
               <motion.div
                 animate={{ rotate: isMobileMenuOpen ? 180 : 0 }}

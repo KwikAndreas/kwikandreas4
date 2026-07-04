@@ -15,6 +15,11 @@ import {
   Gamepad2,
   University,
   School2,
+  Smartphone,
+  Globe,
+  BrainCircuit,
+  BookOpen,
+  Handshake,
 } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
@@ -45,34 +50,34 @@ const achievements = [
 
 const interests = [
   {
-    icon: "🎮",
+    icon: Gamepad2,
     name: "Game Development",
-    color: "bg-blue-500/20 text-blue-600 dark:text-blue-400",
+    color: "from-blue-500/20 to-cyan-500/20 text-blue-500 border-blue-500/20",
   },
   {
-    icon: "📱",
+    icon: Smartphone,
     name: "Mobile Development",
-    color: "bg-purple-500/20 text-purple-600 dark:text-purple-400",
+    color: "from-purple-500/20 to-pink-500/20 text-purple-500 border-purple-500/20",
   },
   {
-    icon: "💻",
+    icon: Globe,
     name: "Web Development",
-    color: "bg-green-500/20 text-green-600 dark:text-green-400",
+    color: "from-emerald-500/20 to-green-500/20 text-emerald-500 border-emerald-500/20",
   },
   {
-    icon: "🧠",
+    icon: BrainCircuit,
     name: "Machine Learning",
-    color: "bg-orange-500/20 text-orange-600 dark:text-orange-400",
+    color: "from-orange-500/20 to-red-500/20 text-orange-500 border-orange-500/20",
   },
   {
-    icon: "📖",
+    icon: BookOpen,
     name: "Open Source",
-    color: "bg-cyan-500/20 text-cyan-600 dark:text-cyan-400",
+    color: "from-cyan-500/20 to-blue-500/20 text-cyan-500 border-cyan-500/20",
   },
   {
-    icon: "🤝",
+    icon: Handshake,
     name: "Collaboration",
-    color: "bg-pink-500/20 text-pink-600 dark:text-pink-400",
+    color: "from-pink-500/20 to-rose-500/20 text-pink-500 border-pink-500/20",
   },
 ];
 
@@ -203,13 +208,7 @@ export function AboutSection() {
                     Kwik Andreas Jonathan
                   </h3>
 
-                  {/* Hidden SEO content with name variations */}
-                  <div className="sr-only">
-                    <p>KwikAndreas - Full Stack Developer Indonesia</p>
-                    <p>Kwik Andreas Jonathan, also known as KwikAndreas</p>
-                    <p>Andreas Jonathan Kwik portfolio website</p>
-                    <p>Professional web developer Kwik Andreas</p>
-                  </div>
+
 
                   <div className="space-y-2 text-sm text-muted-foreground">
                     <div className="flex items-center justify-center gap-2">
@@ -323,22 +322,25 @@ export function AboutSection() {
                 {activeTab === "interests" && (
                   <div className="space-y-6">
                     <h3 className="text-xl font-semibold mb-4">My Interests</h3>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                      {interests.map((interest, index) => (
-                        <motion.div
-                          key={index}
-                          initial={{ opacity: 0, scale: 0.8 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: index * 0.1 }}
-                          whileHover={{ scale: 1.05 }}
-                          className={`p-3 rounded-lg ${interest.color} flex items-center gap-3 transition-all duration-200 cursor-pointer`}
-                        >
-                          <span className="text-lg">{interest.icon}</span>
-                          <span className="font-medium text-sm">
-                            {interest.name}
-                          </span>
-                        </motion.div>
-                      ))}
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                      {interests.map((interest, index) => {
+                        const Icon = interest.icon;
+                        return (
+                          <motion.div
+                            key={index}
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: index * 0.1 }}
+                            whileHover={{ scale: 1.05, y: -4 }}
+                            className={`p-5 rounded-xl bg-gradient-to-br ${interest.color} border flex flex-col items-center justify-center gap-3 transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md`}
+                          >
+                            <Icon className="w-8 h-8" />
+                            <span className="font-medium text-sm text-center text-foreground">
+                              {interest.name}
+                            </span>
+                          </motion.div>
+                        );
+                      })}
                     </div>
                   </div>
                 )}
