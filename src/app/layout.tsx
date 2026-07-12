@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { JsonLd } from "./jsonld";
 import { seoKeywords } from "@/lib/seo/structured-data";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -176,6 +177,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </ThemeProvider>
+        <SpeedInsights/>
       </body>
     </html>
   );
